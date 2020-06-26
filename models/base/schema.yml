@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: springml_demo_dataset
+    tables:
+        - name: sales
+          description: 'Sales data'
+          columns:
+            - name: Transaction_date
+            - name: Product
+            - name: Price
+            - name: Payment_Type
+            - name: Name
+            - name: City
+            - name: State
+            - name: Country
+            - name: Account_Created
+            - name: Last_Login
+            - name: Latitude
+            - name: Longitude
+
+models:
+    - name: payments
+      description: "Analysing payment types from sales data"
+      columns:
+        - name: payment_type
+          description: "Payment type: Credit or cash"
+        - name: number_of_payments
+        - name: total_price

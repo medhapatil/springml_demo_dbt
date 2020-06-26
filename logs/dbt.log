@@ -1,0 +1,422 @@
+2020-06-26 12:31:57.586038 (MainThread): Running with dbt=0.17.0
+2020-06-26 12:31:58.062506 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile='sales', profiles_dir='/Users/medhapatil/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-06-26 12:31:58.064148 (MainThread): Tracking: tracking
+2020-06-26 12:31:58.097855 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112046850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11204bfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11204bdd0>]}
+2020-06-26 12:31:58.152798 (MainThread): Partial parsing not enabled
+2020-06-26 12:31:58.156691 (MainThread): Parsing macros/core.sql
+2020-06-26 12:31:58.166746 (MainThread): Parsing macros/materializations/helpers.sql
+2020-06-26 12:31:58.181063 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-06-26 12:31:58.184602 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-06-26 12:31:58.211500 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-06-26 12:31:58.249490 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-06-26 12:31:58.275513 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-06-26 12:31:58.278809 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-06-26 12:31:58.287210 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-06-26 12:31:58.304348 (MainThread): Parsing macros/materializations/table/table.sql
+2020-06-26 12:31:58.315294 (MainThread): Parsing macros/materializations/view/view.sql
+2020-06-26 12:31:58.324261 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-06-26 12:31:58.332785 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-06-26 12:31:58.334910 (MainThread): Parsing macros/etc/query.sql
+2020-06-26 12:31:58.336851 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-06-26 12:31:58.340074 (MainThread): Parsing macros/etc/datetime.sql
+2020-06-26 12:31:58.351745 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-06-26 12:31:58.354728 (MainThread): Parsing macros/etc/get_custom_database.sql
+2020-06-26 12:31:58.357578 (MainThread): Parsing macros/adapters/common.sql
+2020-06-26 12:31:58.416882 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-06-26 12:31:58.419283 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-06-26 12:31:58.421247 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-06-26 12:31:58.423558 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-06-26 12:31:58.427227 (MainThread): Parsing macros/etc.sql
+2020-06-26 12:31:58.428590 (MainThread): Parsing macros/catalog.sql
+2020-06-26 12:31:58.438140 (MainThread): Parsing macros/adapters.sql
+2020-06-26 12:31:58.459161 (MainThread): Parsing macros/materializations/seed.sql
+2020-06-26 12:31:58.462541 (MainThread): Parsing macros/materializations/view.sql
+2020-06-26 12:31:58.466055 (MainThread): Parsing macros/materializations/table.sql
+2020-06-26 12:31:58.482865 (MainThread): Parsing macros/materializations/incremental.sql
+2020-06-26 12:31:58.499365 (MainThread): Parsing macros/materializations/snapshot.sql
+2020-06-26 12:31:58.526845 (MainThread): Partial parsing not enabled
+2020-06-26 12:31:58.567894 (MainThread): Acquiring new bigquery connection "model.springml_demo_dbt_project.payments".
+2020-06-26 12:31:58.568082 (MainThread): Opening a new connection, currently in state init
+2020-06-26 12:31:58.696193 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112200ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1120a4b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11220eb10>]}
+2020-06-26 12:31:58.696534 (MainThread): Flushing usage events
+2020-06-26 12:31:58.998865 (MainThread): Connection 'model.springml_demo_dbt_project.payments' was properly closed.
+2020-06-26 12:31:58.999131 (MainThread): Encountered an error:
+2020-06-26 12:31:58.999371 (MainThread): Compilation Error in model payments (models/payments.sql)
+  Model 'model.springml_demo_dbt_project.payments' (models/payments.sql) depends on a source named 'springml_demo_dataset.sales' which was not found
+2020-06-26 12:31:59.025720 (MainThread): Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/dbt/main.py", line 81, in main
+    results, succeeded = handle_and_check(args)
+  File "/usr/local/lib/python3.7/site-packages/dbt/main.py", line 159, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/usr/local/lib/python3.7/site-packages/dbt/main.py", line 212, in run_from_args
+    results = task.run()
+  File "/usr/local/lib/python3.7/site-packages/dbt/task/runnable.py", line 389, in run
+    self._runtime_initialize()
+  File "/usr/local/lib/python3.7/site-packages/dbt/task/runnable.py", line 103, in _runtime_initialize
+    super()._runtime_initialize()
+  File "/usr/local/lib/python3.7/site-packages/dbt/task/runnable.py", line 71, in _runtime_initialize
+    self.load_manifest()
+  File "/usr/local/lib/python3.7/site-packages/dbt/task/runnable.py", line 60, in load_manifest
+    self.manifest = get_full_manifest(self.config)
+  File "/usr/local/lib/python3.7/site-packages/dbt/perf_utils.py", line 23, in get_full_manifest
+    return load_manifest(config, internal, set_header)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 641, in load_manifest
+    return ManifestLoader.load_all(config, internal_manifest, macro_hook)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 358, in load_all
+    manifest = loader.create_manifest()
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 334, in create_manifest
+    self.process_manifest(manifest)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 305, in process_manifest
+    process_sources(manifest, project_name)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 600, in process_sources
+    _process_sources_for_node(manifest, current_project, node)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 587, in _process_sources_for_node
+    disabled=(isinstance(target_source, Disabled))
+  File "/usr/local/lib/python3.7/site-packages/dbt/utils.py", line 337, in invalid_source_fail_unless_test
+    disabled=disabled
+  File "/usr/local/lib/python3.7/site-packages/dbt/exceptions.py", line 554, in source_target_not_found
+    raise_compiler_error(msg, model)
+  File "/usr/local/lib/python3.7/site-packages/dbt/exceptions.py", line 392, in raise_compiler_error
+    raise CompilationException(msg, node)
+dbt.exceptions.CompilationException: Compilation Error in model payments (models/payments.sql)
+  Model 'model.springml_demo_dbt_project.payments' (models/payments.sql) depends on a source named 'springml_demo_dataset.sales' which was not found
+
+2020-06-26 12:36:45.600116 (MainThread): Running with dbt=0.17.0
+2020-06-26 12:36:46.112666 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile='sales', profiles_dir='/Users/medhapatil/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-06-26 12:36:46.114375 (MainThread): Tracking: tracking
+2020-06-26 12:36:46.149765 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a547190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a54df90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a54de50>]}
+2020-06-26 12:36:46.212418 (MainThread): Partial parsing not enabled
+2020-06-26 12:36:46.217110 (MainThread): Parsing macros/core.sql
+2020-06-26 12:36:46.224273 (MainThread): Parsing macros/materializations/helpers.sql
+2020-06-26 12:36:46.240809 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-06-26 12:36:46.248327 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-06-26 12:36:46.273588 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-06-26 12:36:46.337783 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-06-26 12:36:46.388309 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-06-26 12:36:46.391679 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-06-26 12:36:46.400747 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-06-26 12:36:46.420524 (MainThread): Parsing macros/materializations/table/table.sql
+2020-06-26 12:36:46.429850 (MainThread): Parsing macros/materializations/view/view.sql
+2020-06-26 12:36:46.439160 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-06-26 12:36:46.446085 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-06-26 12:36:46.447529 (MainThread): Parsing macros/etc/query.sql
+2020-06-26 12:36:46.449121 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-06-26 12:36:46.451413 (MainThread): Parsing macros/etc/datetime.sql
+2020-06-26 12:36:46.465389 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-06-26 12:36:46.469711 (MainThread): Parsing macros/etc/get_custom_database.sql
+2020-06-26 12:36:46.472844 (MainThread): Parsing macros/adapters/common.sql
+2020-06-26 12:36:46.539423 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-06-26 12:36:46.541334 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-06-26 12:36:46.543097 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-06-26 12:36:46.545532 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-06-26 12:36:46.549793 (MainThread): Parsing macros/etc.sql
+2020-06-26 12:36:46.551292 (MainThread): Parsing macros/catalog.sql
+2020-06-26 12:36:46.559361 (MainThread): Parsing macros/adapters.sql
+2020-06-26 12:36:46.599995 (MainThread): Parsing macros/materializations/seed.sql
+2020-06-26 12:36:46.604692 (MainThread): Parsing macros/materializations/view.sql
+2020-06-26 12:36:46.608312 (MainThread): Parsing macros/materializations/table.sql
+2020-06-26 12:36:46.625501 (MainThread): Parsing macros/materializations/incremental.sql
+2020-06-26 12:36:46.655751 (MainThread): Parsing macros/materializations/snapshot.sql
+2020-06-26 12:36:46.686270 (MainThread): Partial parsing not enabled
+2020-06-26 12:36:46.742667 (MainThread): Acquiring new bigquery connection "model.springml_demo_dbt_project.payments".
+2020-06-26 12:36:46.742813 (MainThread): Opening a new connection, currently in state init
+2020-06-26 12:36:46.881383 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a713390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a71b390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a5a2dd0>]}
+2020-06-26 12:36:46.881651 (MainThread): Flushing usage events
+2020-06-26 12:36:47.190812 (MainThread): Connection 'model.springml_demo_dbt_project.payments' was properly closed.
+2020-06-26 12:36:47.191024 (MainThread): Encountered an error:
+2020-06-26 12:36:47.191204 (MainThread): Compilation Error in model payments (models/base/payments.sql)
+  Model 'model.springml_demo_dbt_project.payments' (models/base/payments.sql) depends on a source named 'springml_demo_dataset.sales' which was not found
+2020-06-26 12:36:47.196596 (MainThread): Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/dbt/main.py", line 81, in main
+    results, succeeded = handle_and_check(args)
+  File "/usr/local/lib/python3.7/site-packages/dbt/main.py", line 159, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/usr/local/lib/python3.7/site-packages/dbt/main.py", line 212, in run_from_args
+    results = task.run()
+  File "/usr/local/lib/python3.7/site-packages/dbt/task/runnable.py", line 389, in run
+    self._runtime_initialize()
+  File "/usr/local/lib/python3.7/site-packages/dbt/task/runnable.py", line 103, in _runtime_initialize
+    super()._runtime_initialize()
+  File "/usr/local/lib/python3.7/site-packages/dbt/task/runnable.py", line 71, in _runtime_initialize
+    self.load_manifest()
+  File "/usr/local/lib/python3.7/site-packages/dbt/task/runnable.py", line 60, in load_manifest
+    self.manifest = get_full_manifest(self.config)
+  File "/usr/local/lib/python3.7/site-packages/dbt/perf_utils.py", line 23, in get_full_manifest
+    return load_manifest(config, internal, set_header)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 641, in load_manifest
+    return ManifestLoader.load_all(config, internal_manifest, macro_hook)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 358, in load_all
+    manifest = loader.create_manifest()
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 334, in create_manifest
+    self.process_manifest(manifest)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 305, in process_manifest
+    process_sources(manifest, project_name)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 600, in process_sources
+    _process_sources_for_node(manifest, current_project, node)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 587, in _process_sources_for_node
+    disabled=(isinstance(target_source, Disabled))
+  File "/usr/local/lib/python3.7/site-packages/dbt/utils.py", line 337, in invalid_source_fail_unless_test
+    disabled=disabled
+  File "/usr/local/lib/python3.7/site-packages/dbt/exceptions.py", line 554, in source_target_not_found
+    raise_compiler_error(msg, model)
+  File "/usr/local/lib/python3.7/site-packages/dbt/exceptions.py", line 392, in raise_compiler_error
+    raise CompilationException(msg, node)
+dbt.exceptions.CompilationException: Compilation Error in model payments (models/base/payments.sql)
+  Model 'model.springml_demo_dbt_project.payments' (models/base/payments.sql) depends on a source named 'springml_demo_dataset.sales' which was not found
+
+2020-06-26 13:18:39.320669 (MainThread): Running with dbt=0.17.0
+2020-06-26 13:18:39.836015 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile='springml', profiles_dir='/Users/medhapatil/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-06-26 13:18:39.839175 (MainThread): Tracking: tracking
+2020-06-26 13:18:39.857204 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1131812d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11315e8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11319b4d0>]}
+2020-06-26 13:18:39.927226 (MainThread): Partial parsing not enabled
+2020-06-26 13:18:39.930146 (MainThread): Parsing macros/core.sql
+2020-06-26 13:18:39.936127 (MainThread): Parsing macros/materializations/helpers.sql
+2020-06-26 13:18:39.949955 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-06-26 13:18:39.953324 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-06-26 13:18:39.979340 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-06-26 13:18:40.021621 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-06-26 13:18:40.053228 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-06-26 13:18:40.056600 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-06-26 13:18:40.071115 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-06-26 13:18:40.097565 (MainThread): Parsing macros/materializations/table/table.sql
+2020-06-26 13:18:40.106591 (MainThread): Parsing macros/materializations/view/view.sql
+2020-06-26 13:18:40.119910 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-06-26 13:18:40.133418 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-06-26 13:18:40.135908 (MainThread): Parsing macros/etc/query.sql
+2020-06-26 13:18:40.138444 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-06-26 13:18:40.142415 (MainThread): Parsing macros/etc/datetime.sql
+2020-06-26 13:18:40.161951 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-06-26 13:18:40.164857 (MainThread): Parsing macros/etc/get_custom_database.sql
+2020-06-26 13:18:40.167796 (MainThread): Parsing macros/adapters/common.sql
+2020-06-26 13:18:40.236165 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-06-26 13:18:40.238840 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-06-26 13:18:40.240876 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-06-26 13:18:40.243999 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-06-26 13:18:40.248446 (MainThread): Parsing macros/etc.sql
+2020-06-26 13:18:40.249855 (MainThread): Parsing macros/catalog.sql
+2020-06-26 13:18:40.258559 (MainThread): Parsing macros/adapters.sql
+2020-06-26 13:18:40.281749 (MainThread): Parsing macros/materializations/seed.sql
+2020-06-26 13:18:40.284455 (MainThread): Parsing macros/materializations/view.sql
+2020-06-26 13:18:40.287101 (MainThread): Parsing macros/materializations/table.sql
+2020-06-26 13:18:40.301763 (MainThread): Parsing macros/materializations/incremental.sql
+2020-06-26 13:18:40.320722 (MainThread): Parsing macros/materializations/snapshot.sql
+2020-06-26 13:18:40.353337 (MainThread): Partial parsing not enabled
+2020-06-26 13:18:40.406394 (MainThread): Acquiring new bigquery connection "model.springml_demo_dbt_project.payments".
+2020-06-26 13:18:40.406539 (MainThread): Opening a new connection, currently in state init
+2020-06-26 13:18:40.560110 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113210690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11336fe10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113350390>]}
+2020-06-26 13:18:40.560457 (MainThread): Flushing usage events
+2020-06-26 13:18:41.095932 (MainThread): Connection 'model.springml_demo_dbt_project.payments' was properly closed.
+2020-06-26 13:18:41.096130 (MainThread): Encountered an error:
+2020-06-26 13:18:41.096274 (MainThread): Compilation Error in model payments (models/base/payments.sql)
+  Model 'model.springml_demo_dbt_project.payments' (models/base/payments.sql) depends on a source named 'springml_demo_dataset.sales' which was not found
+2020-06-26 13:18:41.109437 (MainThread): Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/dbt/main.py", line 81, in main
+    results, succeeded = handle_and_check(args)
+  File "/usr/local/lib/python3.7/site-packages/dbt/main.py", line 159, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/usr/local/lib/python3.7/site-packages/dbt/main.py", line 212, in run_from_args
+    results = task.run()
+  File "/usr/local/lib/python3.7/site-packages/dbt/task/runnable.py", line 389, in run
+    self._runtime_initialize()
+  File "/usr/local/lib/python3.7/site-packages/dbt/task/runnable.py", line 103, in _runtime_initialize
+    super()._runtime_initialize()
+  File "/usr/local/lib/python3.7/site-packages/dbt/task/runnable.py", line 71, in _runtime_initialize
+    self.load_manifest()
+  File "/usr/local/lib/python3.7/site-packages/dbt/task/runnable.py", line 60, in load_manifest
+    self.manifest = get_full_manifest(self.config)
+  File "/usr/local/lib/python3.7/site-packages/dbt/perf_utils.py", line 23, in get_full_manifest
+    return load_manifest(config, internal, set_header)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 641, in load_manifest
+    return ManifestLoader.load_all(config, internal_manifest, macro_hook)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 358, in load_all
+    manifest = loader.create_manifest()
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 334, in create_manifest
+    self.process_manifest(manifest)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 305, in process_manifest
+    process_sources(manifest, project_name)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 600, in process_sources
+    _process_sources_for_node(manifest, current_project, node)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 587, in _process_sources_for_node
+    disabled=(isinstance(target_source, Disabled))
+  File "/usr/local/lib/python3.7/site-packages/dbt/utils.py", line 337, in invalid_source_fail_unless_test
+    disabled=disabled
+  File "/usr/local/lib/python3.7/site-packages/dbt/exceptions.py", line 554, in source_target_not_found
+    raise_compiler_error(msg, model)
+  File "/usr/local/lib/python3.7/site-packages/dbt/exceptions.py", line 392, in raise_compiler_error
+    raise CompilationException(msg, node)
+dbt.exceptions.CompilationException: Compilation Error in model payments (models/base/payments.sql)
+  Model 'model.springml_demo_dbt_project.payments' (models/base/payments.sql) depends on a source named 'springml_demo_dataset.sales' which was not found
+
+2020-06-26 13:22:00.333193 (MainThread): Running with dbt=0.17.0
+2020-06-26 13:22:00.795861 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile='springml', profiles_dir='/Users/medhapatil/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-06-26 13:22:00.797352 (MainThread): Tracking: tracking
+2020-06-26 13:22:00.813321 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f369d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f02f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f50150>]}
+2020-06-26 13:22:00.867442 (MainThread): Partial parsing not enabled
+2020-06-26 13:22:00.871385 (MainThread): Parsing macros/core.sql
+2020-06-26 13:22:00.878745 (MainThread): Parsing macros/materializations/helpers.sql
+2020-06-26 13:22:00.888879 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-06-26 13:22:00.891924 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-06-26 13:22:00.916932 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-06-26 13:22:00.956433 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-06-26 13:22:00.985847 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-06-26 13:22:00.989290 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-06-26 13:22:00.998032 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-06-26 13:22:01.019538 (MainThread): Parsing macros/materializations/table/table.sql
+2020-06-26 13:22:01.029133 (MainThread): Parsing macros/materializations/view/view.sql
+2020-06-26 13:22:01.037431 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-06-26 13:22:01.043972 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-06-26 13:22:01.045865 (MainThread): Parsing macros/etc/query.sql
+2020-06-26 13:22:01.048067 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-06-26 13:22:01.051090 (MainThread): Parsing macros/etc/datetime.sql
+2020-06-26 13:22:01.066728 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-06-26 13:22:01.070100 (MainThread): Parsing macros/etc/get_custom_database.sql
+2020-06-26 13:22:01.072990 (MainThread): Parsing macros/adapters/common.sql
+2020-06-26 13:22:01.131700 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-06-26 13:22:01.134269 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-06-26 13:22:01.136337 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-06-26 13:22:01.138601 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-06-26 13:22:01.142806 (MainThread): Parsing macros/etc.sql
+2020-06-26 13:22:01.144828 (MainThread): Parsing macros/catalog.sql
+2020-06-26 13:22:01.154058 (MainThread): Parsing macros/adapters.sql
+2020-06-26 13:22:01.174763 (MainThread): Parsing macros/materializations/seed.sql
+2020-06-26 13:22:01.178145 (MainThread): Parsing macros/materializations/view.sql
+2020-06-26 13:22:01.181523 (MainThread): Parsing macros/materializations/table.sql
+2020-06-26 13:22:01.195022 (MainThread): Parsing macros/materializations/incremental.sql
+2020-06-26 13:22:01.211352 (MainThread): Parsing macros/materializations/snapshot.sql
+2020-06-26 13:22:01.236025 (MainThread): Partial parsing not enabled
+2020-06-26 13:22:01.280674 (MainThread): Acquiring new bigquery connection "model.springml_demo_dbt_project.payments".
+2020-06-26 13:22:01.280852 (MainThread): Opening a new connection, currently in state init
+2020-06-26 13:22:01.393386 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1070e9350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107120090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1070f1f10>]}
+2020-06-26 13:22:01.393698 (MainThread): Flushing usage events
+2020-06-26 13:22:01.897758 (MainThread): Connection 'model.springml_demo_dbt_project.payments' was properly closed.
+2020-06-26 13:22:01.898025 (MainThread): Encountered an error:
+2020-06-26 13:22:01.898219 (MainThread): Compilation Error in model payments (models/base/payments.sql)
+  Model 'model.springml_demo_dbt_project.payments' (models/base/payments.sql) depends on a source named 'springml_demo_dataset.sales' which was not found
+2020-06-26 13:22:01.907941 (MainThread): Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/dbt/main.py", line 81, in main
+    results, succeeded = handle_and_check(args)
+  File "/usr/local/lib/python3.7/site-packages/dbt/main.py", line 159, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/usr/local/lib/python3.7/site-packages/dbt/main.py", line 212, in run_from_args
+    results = task.run()
+  File "/usr/local/lib/python3.7/site-packages/dbt/task/runnable.py", line 389, in run
+    self._runtime_initialize()
+  File "/usr/local/lib/python3.7/site-packages/dbt/task/runnable.py", line 103, in _runtime_initialize
+    super()._runtime_initialize()
+  File "/usr/local/lib/python3.7/site-packages/dbt/task/runnable.py", line 71, in _runtime_initialize
+    self.load_manifest()
+  File "/usr/local/lib/python3.7/site-packages/dbt/task/runnable.py", line 60, in load_manifest
+    self.manifest = get_full_manifest(self.config)
+  File "/usr/local/lib/python3.7/site-packages/dbt/perf_utils.py", line 23, in get_full_manifest
+    return load_manifest(config, internal, set_header)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 641, in load_manifest
+    return ManifestLoader.load_all(config, internal_manifest, macro_hook)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 358, in load_all
+    manifest = loader.create_manifest()
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 334, in create_manifest
+    self.process_manifest(manifest)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 305, in process_manifest
+    process_sources(manifest, project_name)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 600, in process_sources
+    _process_sources_for_node(manifest, current_project, node)
+  File "/usr/local/lib/python3.7/site-packages/dbt/parser/manifest.py", line 587, in _process_sources_for_node
+    disabled=(isinstance(target_source, Disabled))
+  File "/usr/local/lib/python3.7/site-packages/dbt/utils.py", line 337, in invalid_source_fail_unless_test
+    disabled=disabled
+  File "/usr/local/lib/python3.7/site-packages/dbt/exceptions.py", line 554, in source_target_not_found
+    raise_compiler_error(msg, model)
+  File "/usr/local/lib/python3.7/site-packages/dbt/exceptions.py", line 392, in raise_compiler_error
+    raise CompilationException(msg, node)
+dbt.exceptions.CompilationException: Compilation Error in model payments (models/base/payments.sql)
+  Model 'model.springml_demo_dbt_project.payments' (models/base/payments.sql) depends on a source named 'springml_demo_dataset.sales' which was not found
+
+2020-06-26 13:28:11.454002 (MainThread): Running with dbt=0.17.0
+2020-06-26 13:28:12.081155 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile='springml', profiles_dir='/Users/medhapatil/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-06-26 13:28:12.083143 (MainThread): Tracking: tracking
+2020-06-26 13:28:12.104122 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107260e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107276590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107276390>]}
+2020-06-26 13:28:12.185497 (MainThread): Partial parsing not enabled
+2020-06-26 13:28:12.189476 (MainThread): Parsing macros/core.sql
+2020-06-26 13:28:12.197149 (MainThread): Parsing macros/materializations/helpers.sql
+2020-06-26 13:28:12.212747 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-06-26 13:28:12.216265 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-06-26 13:28:12.248911 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-06-26 13:28:12.298508 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-06-26 13:28:12.331238 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-06-26 13:28:12.338733 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-06-26 13:28:12.358537 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-06-26 13:28:12.397407 (MainThread): Parsing macros/materializations/table/table.sql
+2020-06-26 13:28:12.420068 (MainThread): Parsing macros/materializations/view/view.sql
+2020-06-26 13:28:12.436939 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-06-26 13:28:12.452463 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-06-26 13:28:12.457595 (MainThread): Parsing macros/etc/query.sql
+2020-06-26 13:28:12.461272 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-06-26 13:28:12.465376 (MainThread): Parsing macros/etc/datetime.sql
+2020-06-26 13:28:12.482723 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-06-26 13:28:12.490014 (MainThread): Parsing macros/etc/get_custom_database.sql
+2020-06-26 13:28:12.496592 (MainThread): Parsing macros/adapters/common.sql
+2020-06-26 13:28:12.563503 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-06-26 13:28:12.565588 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-06-26 13:28:12.567451 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-06-26 13:28:12.570016 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-06-26 13:28:12.574501 (MainThread): Parsing macros/etc.sql
+2020-06-26 13:28:12.576032 (MainThread): Parsing macros/catalog.sql
+2020-06-26 13:28:12.584093 (MainThread): Parsing macros/adapters.sql
+2020-06-26 13:28:12.604360 (MainThread): Parsing macros/materializations/seed.sql
+2020-06-26 13:28:12.607113 (MainThread): Parsing macros/materializations/view.sql
+2020-06-26 13:28:12.609997 (MainThread): Parsing macros/materializations/table.sql
+2020-06-26 13:28:12.622616 (MainThread): Parsing macros/materializations/incremental.sql
+2020-06-26 13:28:12.638720 (MainThread): Parsing macros/materializations/snapshot.sql
+2020-06-26 13:28:12.663598 (MainThread): Partial parsing not enabled
+2020-06-26 13:28:12.704936 (MainThread): Acquiring new bigquery connection "model.springml_demo_dbt_project.payments".
+2020-06-26 13:28:12.705073 (MainThread): Opening a new connection, currently in state init
+2020-06-26 13:28:12.916504 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 147 macros, 0 operations, 1 seed file, 1 source
+2020-06-26 13:28:12.917190 (MainThread): 
+2020-06-26 13:28:12.917576 (MainThread): Acquiring new bigquery connection "master".
+2020-06-26 13:28:12.917686 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 13:28:12.921771 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_prismatic-cider-279015".
+2020-06-26 13:28:12.922070 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2020-06-26 13:28:12.925830 (ThreadPoolExecutor-0_0): Your application has authenticated using end user credentials from Google Cloud SDK. We recommend that most server applications use service accounts instead. If your application continues to use end user credentials from Cloud SDK, you might receive a "quota exceeded" or "API not enabled" error. For more information about service accounts, see https://cloud.google.com/docs/authentication/
+2020-06-26 13:28:15.622786 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_prismatic-cider-279015_springml_demo_dataset".
+2020-06-26 13:28:15.623104 (ThreadPoolExecutor-1_0): Re-using an available connection from the pool (formerly list_prismatic-cider-279015).
+2020-06-26 13:28:15.623316 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2020-06-26 13:28:15.794775 (MainThread): Acquiring new bigquery connection "master".
+2020-06-26 13:28:15.794969 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 13:28:15.795346 (MainThread): 09:28:15 | Concurrency: 1 threads (target='dev')
+2020-06-26 13:28:15.795544 (MainThread): 09:28:15 | 
+2020-06-26 13:28:15.799492 (Thread-1): Began running node model.springml_demo_dbt_project.payments
+2020-06-26 13:28:15.802417 (Thread-1): 09:28:15 | 1 of 1 START view model springml_demo_dataset.payments............... [RUN]
+2020-06-26 13:28:15.802888 (Thread-1): Acquiring new bigquery connection "model.springml_demo_dbt_project.payments".
+2020-06-26 13:28:15.803023 (Thread-1): Re-using an available connection from the pool (formerly list_prismatic-cider-279015_springml_demo_dataset).
+2020-06-26 13:28:15.803178 (Thread-1): Compiling model.springml_demo_dbt_project.payments
+2020-06-26 13:28:15.824411 (Thread-1): Writing injected SQL for node "model.springml_demo_dbt_project.payments"
+2020-06-26 13:28:15.825189 (Thread-1): finished collecting timing info
+2020-06-26 13:28:15.862915 (Thread-1): Writing runtime SQL for node "model.springml_demo_dbt_project.payments"
+2020-06-26 13:28:15.863628 (Thread-1): On model.springml_demo_dbt_project.payments: /* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.payments"} */
+
+
+  create or replace view `prismatic-cider-279015`.`springml_demo_dataset`.`payments`
+  OPTIONS()
+  as select payment_type, 
+    count(*) as number_of_payments, 
+    sum(price) as total_price 
+from `prismatic-cider-279015`.`springml_demo_dataset`.`sales`
+where country like "United States"
+group by payment_type;
+
+
+2020-06-26 13:28:17.126772 (Thread-1): finished collecting timing info
+2020-06-26 13:28:17.127588 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '183765e8-0708-4f17-9722-3d7807a4f531', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074577d0>]}
+2020-06-26 13:28:17.128847 (Thread-1): 09:28:17 | 1 of 1 OK created view model springml_demo_dataset.payments.......... [CREATE VIEW in 1.32s]
+2020-06-26 13:28:17.129012 (Thread-1): Finished running node model.springml_demo_dbt_project.payments
+2020-06-26 13:28:17.142468 (MainThread): Acquiring new bigquery connection "master".
+2020-06-26 13:28:17.142709 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 13:28:17.143151 (MainThread): 09:28:17 | 
+2020-06-26 13:28:17.143365 (MainThread): 09:28:17 | Finished running 1 view model in 4.23s.
+2020-06-26 13:28:17.143567 (MainThread): Connection 'master' was properly closed.
+2020-06-26 13:28:17.143723 (MainThread): Connection 'model.springml_demo_dbt_project.payments' was left open.
+2020-06-26 13:28:17.149352 (MainThread): 
+2020-06-26 13:28:17.149552 (MainThread): Completed successfully
+2020-06-26 13:28:17.149737 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+2020-06-26 13:28:17.150053 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10761d250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10761db50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072e3c90>]}
+2020-06-26 13:28:17.150308 (MainThread): Flushing usage events
