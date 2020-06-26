@@ -420,3 +420,902 @@ group by payment_type;
 Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
 2020-06-26 13:28:17.150053 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10761d250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10761db50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072e3c90>]}
 2020-06-26 13:28:17.150308 (MainThread): Flushing usage events
+2020-06-26 15:08:10.306900 (MainThread): Running with dbt=0.17.0
+2020-06-26 15:08:10.879639 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile='springml', profiles_dir='/Users/medhapatil/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-06-26 15:08:10.881277 (MainThread): Tracking: tracking
+2020-06-26 15:08:10.899054 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bdf0b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be06410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be06210>]}
+2020-06-26 15:08:10.955926 (MainThread): Partial parsing not enabled
+2020-06-26 15:08:10.959770 (MainThread): Parsing macros/core.sql
+2020-06-26 15:08:10.968954 (MainThread): Parsing macros/materializations/helpers.sql
+2020-06-26 15:08:10.981535 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-06-26 15:08:10.984830 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-06-26 15:08:11.007970 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-06-26 15:08:11.045203 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-06-26 15:08:11.070902 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-06-26 15:08:11.073938 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-06-26 15:08:11.082305 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-06-26 15:08:11.099524 (MainThread): Parsing macros/materializations/table/table.sql
+2020-06-26 15:08:11.110765 (MainThread): Parsing macros/materializations/view/view.sql
+2020-06-26 15:08:11.119143 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-06-26 15:08:11.126483 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-06-26 15:08:11.128351 (MainThread): Parsing macros/etc/query.sql
+2020-06-26 15:08:11.129934 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-06-26 15:08:11.132140 (MainThread): Parsing macros/etc/datetime.sql
+2020-06-26 15:08:11.143339 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-06-26 15:08:11.146637 (MainThread): Parsing macros/etc/get_custom_database.sql
+2020-06-26 15:08:11.149205 (MainThread): Parsing macros/adapters/common.sql
+2020-06-26 15:08:11.207924 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-06-26 15:08:11.209773 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-06-26 15:08:11.211315 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-06-26 15:08:11.213198 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-06-26 15:08:11.216472 (MainThread): Parsing macros/etc.sql
+2020-06-26 15:08:11.217871 (MainThread): Parsing macros/catalog.sql
+2020-06-26 15:08:11.225458 (MainThread): Parsing macros/adapters.sql
+2020-06-26 15:08:11.245190 (MainThread): Parsing macros/materializations/seed.sql
+2020-06-26 15:08:11.248101 (MainThread): Parsing macros/materializations/view.sql
+2020-06-26 15:08:11.251055 (MainThread): Parsing macros/materializations/table.sql
+2020-06-26 15:08:11.263814 (MainThread): Parsing macros/materializations/incremental.sql
+2020-06-26 15:08:11.279688 (MainThread): Parsing macros/materializations/snapshot.sql
+2020-06-26 15:08:11.304574 (MainThread): Partial parsing not enabled
+2020-06-26 15:08:11.347615 (MainThread): Acquiring new bigquery connection "model.springml_demo_dbt_project.payments".
+2020-06-26 15:08:11.347790 (MainThread): Opening a new connection, currently in state init
+2020-06-26 15:08:11.559438 (MainThread): Found 1 model, 0 tests, 0 snapshots, 0 analyses, 147 macros, 0 operations, 1 seed file, 1 source
+2020-06-26 15:08:11.560094 (MainThread): 
+2020-06-26 15:08:11.560499 (MainThread): Acquiring new bigquery connection "master".
+2020-06-26 15:08:11.560605 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 15:08:11.562915 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_prismatic-cider-279015".
+2020-06-26 15:08:11.563171 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2020-06-26 15:08:11.565367 (ThreadPoolExecutor-0_0): Your application has authenticated using end user credentials from Google Cloud SDK. We recommend that most server applications use service accounts instead. If your application continues to use end user credentials from Cloud SDK, you might receive a "quota exceeded" or "API not enabled" error. For more information about service accounts, see https://cloud.google.com/docs/authentication/
+2020-06-26 15:08:14.729022 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_prismatic-cider-279015_springml_demo_dataset".
+2020-06-26 15:08:14.729347 (ThreadPoolExecutor-1_0): Re-using an available connection from the pool (formerly list_prismatic-cider-279015).
+2020-06-26 15:08:14.729569 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2020-06-26 15:08:14.860224 (MainThread): Acquiring new bigquery connection "master".
+2020-06-26 15:08:14.860419 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 15:08:14.860833 (MainThread): 11:08:14 | Concurrency: 1 threads (target='dev')
+2020-06-26 15:08:14.861034 (MainThread): 11:08:14 | 
+2020-06-26 15:08:14.863823 (Thread-1): Began running node model.springml_demo_dbt_project.payments
+2020-06-26 15:08:14.866758 (Thread-1): 11:08:14 | 1 of 1 START view model springml_demo_dataset.payments............... [RUN]
+2020-06-26 15:08:14.867250 (Thread-1): Acquiring new bigquery connection "model.springml_demo_dbt_project.payments".
+2020-06-26 15:08:14.867403 (Thread-1): Re-using an available connection from the pool (formerly list_prismatic-cider-279015_springml_demo_dataset).
+2020-06-26 15:08:14.867572 (Thread-1): Compiling model.springml_demo_dbt_project.payments
+2020-06-26 15:08:14.888734 (Thread-1): Writing injected SQL for node "model.springml_demo_dbt_project.payments"
+2020-06-26 15:08:14.889505 (Thread-1): finished collecting timing info
+2020-06-26 15:08:14.927414 (Thread-1): Writing runtime SQL for node "model.springml_demo_dbt_project.payments"
+2020-06-26 15:08:14.928195 (Thread-1): On model.springml_demo_dbt_project.payments: /* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.payments"} */
+
+
+  create or replace view `prismatic-cider-279015`.`springml_demo_dataset`.`payments`
+  OPTIONS()
+  as select payment_type, 
+    count(*) as number_of_payments, 
+    sum(price) as total_price 
+from `prismatic-cider-279015`.`springml_demo_dataset`.`sales`
+where country like "United States"
+group by payment_type;
+
+
+2020-06-26 15:08:15.716288 (Thread-1): finished collecting timing info
+2020-06-26 15:08:15.717100 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '55ccf017-570c-412c-8258-393687fb4711', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be7f510>]}
+2020-06-26 15:08:15.718268 (Thread-1): 11:08:15 | 1 of 1 OK created view model springml_demo_dataset.payments.......... [CREATE VIEW in 0.85s]
+2020-06-26 15:08:15.718421 (Thread-1): Finished running node model.springml_demo_dbt_project.payments
+2020-06-26 15:08:15.781557 (MainThread): Acquiring new bigquery connection "master".
+2020-06-26 15:08:15.781849 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 15:08:15.782327 (MainThread): 11:08:15 | 
+2020-06-26 15:08:15.782545 (MainThread): 11:08:15 | Finished running 1 view model in 4.22s.
+2020-06-26 15:08:15.782783 (MainThread): Connection 'master' was properly closed.
+2020-06-26 15:08:15.783050 (MainThread): Connection 'model.springml_demo_dbt_project.payments' was left open.
+2020-06-26 15:08:15.789213 (MainThread): 
+2020-06-26 15:08:15.789458 (MainThread): Completed successfully
+2020-06-26 15:08:15.789710 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+2020-06-26 15:08:15.790050 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bfc1810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c2d2ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c2d2490>]}
+2020-06-26 15:08:15.790291 (MainThread): Flushing usage events
+2020-06-26 15:34:47.320176 (MainThread): Running with dbt=0.17.0
+2020-06-26 15:34:47.877170 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile='springml', profiles_dir='/Users/medhapatil/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-06-26 15:34:47.878521 (MainThread): Tracking: tracking
+2020-06-26 15:34:47.928762 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1134eced0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112f23a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113503310>]}
+2020-06-26 15:34:47.983500 (MainThread): Partial parsing not enabled
+2020-06-26 15:34:47.987075 (MainThread): Parsing macros/core.sql
+2020-06-26 15:34:47.994276 (MainThread): Parsing macros/materializations/helpers.sql
+2020-06-26 15:34:48.006060 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-06-26 15:34:48.009207 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-06-26 15:34:48.031628 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-06-26 15:34:48.071192 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-06-26 15:34:48.097248 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-06-26 15:34:48.100631 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-06-26 15:34:48.109208 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-06-26 15:34:48.126370 (MainThread): Parsing macros/materializations/table/table.sql
+2020-06-26 15:34:48.136457 (MainThread): Parsing macros/materializations/view/view.sql
+2020-06-26 15:34:48.144836 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-06-26 15:34:48.152266 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-06-26 15:34:48.154119 (MainThread): Parsing macros/etc/query.sql
+2020-06-26 15:34:48.156324 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-06-26 15:34:48.159280 (MainThread): Parsing macros/etc/datetime.sql
+2020-06-26 15:34:48.170706 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-06-26 15:34:48.173830 (MainThread): Parsing macros/etc/get_custom_database.sql
+2020-06-26 15:34:48.176529 (MainThread): Parsing macros/adapters/common.sql
+2020-06-26 15:34:48.234564 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-06-26 15:34:48.237766 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-06-26 15:34:48.240344 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-06-26 15:34:48.242986 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-06-26 15:34:48.247501 (MainThread): Parsing macros/etc.sql
+2020-06-26 15:34:48.249239 (MainThread): Parsing macros/catalog.sql
+2020-06-26 15:34:48.258199 (MainThread): Parsing macros/adapters.sql
+2020-06-26 15:34:48.277953 (MainThread): Parsing macros/materializations/seed.sql
+2020-06-26 15:34:48.281067 (MainThread): Parsing macros/materializations/view.sql
+2020-06-26 15:34:48.284431 (MainThread): Parsing macros/materializations/table.sql
+2020-06-26 15:34:48.297810 (MainThread): Parsing macros/materializations/incremental.sql
+2020-06-26 15:34:48.317015 (MainThread): Parsing macros/materializations/snapshot.sql
+2020-06-26 15:34:48.342714 (MainThread): Partial parsing not enabled
+2020-06-26 15:34:48.384484 (MainThread): Acquiring new bigquery connection "model.springml_demo_dbt_project.payments".
+2020-06-26 15:34:48.384664 (MainThread): Opening a new connection, currently in state init
+2020-06-26 15:34:48.418500 (MainThread): Acquiring new bigquery connection "model.springml_demo_dbt_project.creditcard".
+2020-06-26 15:34:48.418649 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 15:34:48.551854 (MainThread): WARNING: Found documentation for resource "creditcards" which was not found or is disabled
+2020-06-26 15:34:48.618674 (MainThread): Found 2 models, 0 tests, 0 snapshots, 0 analyses, 147 macros, 0 operations, 1 seed file, 1 source
+2020-06-26 15:34:48.619433 (MainThread): 
+2020-06-26 15:34:48.619907 (MainThread): Acquiring new bigquery connection "master".
+2020-06-26 15:34:48.620011 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 15:34:48.624137 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_prismatic-cider-279015".
+2020-06-26 15:34:48.624424 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2020-06-26 15:34:48.627567 (ThreadPoolExecutor-0_0): Your application has authenticated using end user credentials from Google Cloud SDK. We recommend that most server applications use service accounts instead. If your application continues to use end user credentials from Cloud SDK, you might receive a "quota exceeded" or "API not enabled" error. For more information about service accounts, see https://cloud.google.com/docs/authentication/
+2020-06-26 15:34:50.727322 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_prismatic-cider-279015_springml_demo_dataset".
+2020-06-26 15:34:50.727693 (ThreadPoolExecutor-1_0): Re-using an available connection from the pool (formerly list_prismatic-cider-279015).
+2020-06-26 15:34:50.727913 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2020-06-26 15:34:50.884636 (MainThread): Acquiring new bigquery connection "master".
+2020-06-26 15:34:50.884821 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 15:34:50.885191 (MainThread): 11:34:50 | Concurrency: 1 threads (target='dev')
+2020-06-26 15:34:50.885388 (MainThread): 11:34:50 | 
+2020-06-26 15:34:50.889605 (Thread-1): Began running node model.springml_demo_dbt_project.creditcard
+2020-06-26 15:34:50.891163 (Thread-1): 11:34:50 | 1 of 2 START view model springml_demo_dataset.creditcard............. [RUN]
+2020-06-26 15:34:50.891627 (Thread-1): Acquiring new bigquery connection "model.springml_demo_dbt_project.creditcard".
+2020-06-26 15:34:50.891770 (Thread-1): Re-using an available connection from the pool (formerly list_prismatic-cider-279015_springml_demo_dataset).
+2020-06-26 15:34:50.891928 (Thread-1): Compiling model.springml_demo_dbt_project.creditcard
+2020-06-26 15:34:50.911256 (Thread-1): Writing injected SQL for node "model.springml_demo_dbt_project.creditcard"
+2020-06-26 15:34:50.911757 (Thread-1): finished collecting timing info
+2020-06-26 15:34:50.950652 (Thread-1): Writing runtime SQL for node "model.springml_demo_dbt_project.creditcard"
+2020-06-26 15:34:50.951185 (Thread-1): On model.springml_demo_dbt_project.creditcard: /* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.creditcard"} */
+
+
+  create or replace view `prismatic-cider-279015`.`springml_demo_dataset`.`creditcard`
+  OPTIONS()
+  as 
+
+select country,
+
+sum(case when payment_type = creditcard then 1 else 0 end) as Amex_payments,
+
+sum(case when payment_type = creditcard then 1 else 0 end) as Mastercard_payments,
+
+sum(case when payment_type = creditcard then 1 else 0 end) as Visa_payments,
+
+from `prismatic-cider-279015`.`springml_demo_dataset`.`sales`
+group by country;
+
+
+2020-06-26 15:34:51.414617 (Thread-1): finished collecting timing info
+2020-06-26 15:34:51.415670 (Thread-1): Database Error in model creditcard (models/base/creditcard.sql)
+  Unrecognized name: creditcard at [10:30]
+  compiled SQL at target/run/springml_demo_dbt_project/models/base/creditcard.sql
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 84, in exception_handler
+    yield
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 363, in _retry_and_handle
+    deadline=None)
+  File "/usr/local/lib/python3.7/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 225, in fn
+    return self._query_and_results(client, sql, conn, job_params)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 352, in _query_and_results
+    iterator = query_job.result(timeout=timeout)
+  File "/usr/local/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 3196, in result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/usr/local/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 818, in result
+    return super(_AsyncJob, self).result(timeout=timeout)
+  File "/usr/local/lib/python3.7/site-packages/google/api_core/future/polling.py", line 122, in result
+    self._blocking_poll(timeout=timeout)
+  File "/usr/local/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 3098, in _blocking_poll
+    super(QueryJob, self)._blocking_poll(timeout=timeout)
+  File "/usr/local/lib/python3.7/site-packages/google/api_core/future/polling.py", line 101, in _blocking_poll
+    retry_(self._done_or_raise)()
+  File "/usr/local/lib/python3.7/site-packages/google/api_core/retry.py", line 286, in retry_wrapped_func
+    on_error=on_error,
+  File "/usr/local/lib/python3.7/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/usr/local/lib/python3.7/site-packages/google/api_core/future/polling.py", line 80, in _done_or_raise
+    if not self.done():
+  File "/usr/local/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 3085, in done
+    timeout=timeout,
+  File "/usr/local/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 1287, in _get_query_results
+    retry, method="GET", path=path, query_params=extra_params, timeout=timeout
+  File "/usr/local/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 556, in _call_api
+    return call()
+  File "/usr/local/lib/python3.7/site-packages/google/api_core/retry.py", line 286, in retry_wrapped_func
+    on_error=on_error,
+  File "/usr/local/lib/python3.7/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/usr/local/lib/python3.7/site-packages/google/cloud/_http.py", line 423, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.BadRequest: 400 GET https://bigquery.googleapis.com/bigquery/v2/projects/prismatic-cider-279015/queries/b6fe0b72-57f6-4e63-8d9d-dc978fedc4ea?maxResults=0&location=US: Unrecognized name: creditcard at [10:30]
+
+(job ID: b6fe0b72-57f6-4e63-8d9d-dc978fedc4ea)
+
+                                                               -----Query Job SQL Follows-----                                                               
+
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+   1:/* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.creditcard"} */
+   2:
+   3:
+   4:  create or replace view `prismatic-cider-279015`.`springml_demo_dataset`.`creditcard`
+   5:  OPTIONS()
+   6:  as 
+   7:
+   8:select country,
+   9:
+  10:sum(case when payment_type = creditcard then 1 else 0 end) as Amex_payments,
+  11:
+  12:sum(case when payment_type = creditcard then 1 else 0 end) as Mastercard_payments,
+  13:
+  14:sum(case when payment_type = creditcard then 1 else 0 end) as Visa_payments,
+  15:
+  16:from `prismatic-cider-279015`.`springml_demo_dataset`.`sales`
+  17:group by country;
+  18:
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 228, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 171, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 273, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 459, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 296, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 226, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 21, in macro
+  File "/usr/local/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 296, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 226, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 65, in macro
+  File "/usr/local/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 296, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 226, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/base/impl.py", line 228, in execute
+    fetch=fetch
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 234, in execute
+    query_job, iterator = self.raw_execute(sql, fetch=fetch)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 227, in raw_execute
+    query_job, iterator = self._retry_and_handle(msg=sql, conn=conn, fn=fn)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 363, in _retry_and_handle
+    deadline=None)
+  File "/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 88, in exception_handler
+    self.handle_error(e, message)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 76, in handle_error
+    raise DatabaseException(error_msg)
+dbt.exceptions.DatabaseException: Database Error in model creditcard (models/base/creditcard.sql)
+  Unrecognized name: creditcard at [10:30]
+  compiled SQL at target/run/springml_demo_dbt_project/models/base/creditcard.sql
+2020-06-26 15:34:51.453680 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '27fb4e69-7770-49ea-bce2-83d687404b1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11384bb10>]}
+2020-06-26 15:34:51.455707 (Thread-1): 11:34:51 | 1 of 2 ERROR creating view model springml_demo_dataset.creditcard.... [ERROR in 0.56s]
+2020-06-26 15:34:51.455899 (Thread-1): Finished running node model.springml_demo_dbt_project.creditcard
+2020-06-26 15:34:51.456109 (Thread-1): Began running node model.springml_demo_dbt_project.payments
+2020-06-26 15:34:51.457697 (Thread-1): 11:34:51 | 2 of 2 START view model springml_demo_dataset.payments............... [RUN]
+2020-06-26 15:34:51.458153 (Thread-1): Acquiring new bigquery connection "model.springml_demo_dbt_project.payments".
+2020-06-26 15:34:51.458295 (Thread-1): Re-using an available connection from the pool (formerly model.springml_demo_dbt_project.creditcard).
+2020-06-26 15:34:51.458425 (Thread-1): Compiling model.springml_demo_dbt_project.payments
+2020-06-26 15:34:51.471427 (Thread-1): Writing injected SQL for node "model.springml_demo_dbt_project.payments"
+2020-06-26 15:34:51.471886 (Thread-1): finished collecting timing info
+2020-06-26 15:34:51.476132 (Thread-1): Writing runtime SQL for node "model.springml_demo_dbt_project.payments"
+2020-06-26 15:34:51.476592 (Thread-1): On model.springml_demo_dbt_project.payments: /* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.payments"} */
+
+
+  create or replace view `prismatic-cider-279015`.`springml_demo_dataset`.`payments`
+  OPTIONS()
+  as select payment_type, 
+    count(*) as number_of_payments, 
+    sum(price) as total_price 
+from `prismatic-cider-279015`.`springml_demo_dataset`.`sales`
+where country like "United States"
+group by payment_type;
+
+
+2020-06-26 15:34:52.126638 (Thread-1): finished collecting timing info
+2020-06-26 15:34:52.127440 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '27fb4e69-7770-49ea-bce2-83d687404b1f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11384bd50>]}
+2020-06-26 15:34:52.128668 (Thread-1): 11:34:52 | 2 of 2 OK created view model springml_demo_dataset.payments.......... [CREATE VIEW in 0.67s]
+2020-06-26 15:34:52.128833 (Thread-1): Finished running node model.springml_demo_dbt_project.payments
+2020-06-26 15:34:52.225693 (MainThread): Acquiring new bigquery connection "master".
+2020-06-26 15:34:52.225945 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 15:34:52.226437 (MainThread): 11:34:52 | 
+2020-06-26 15:34:52.226677 (MainThread): 11:34:52 | Finished running 2 view models in 3.61s.
+2020-06-26 15:34:52.226975 (MainThread): Connection 'master' was properly closed.
+2020-06-26 15:34:52.227312 (MainThread): Connection 'model.springml_demo_dbt_project.payments' was left open.
+2020-06-26 15:34:52.238715 (MainThread): 
+2020-06-26 15:34:52.238923 (MainThread): Completed with 1 error and 0 warnings:
+2020-06-26 15:34:52.239098 (MainThread): 
+2020-06-26 15:34:52.239278 (MainThread): Database Error in model creditcard (models/base/creditcard.sql)
+2020-06-26 15:34:52.239451 (MainThread):   Unrecognized name: creditcard at [10:30]
+2020-06-26 15:34:52.239619 (MainThread):   compiled SQL at target/run/springml_demo_dbt_project/models/base/creditcard.sql
+2020-06-26 15:34:52.239812 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+2020-06-26 15:34:52.240120 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1136d3c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1136d3910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113984290>]}
+2020-06-26 15:34:52.240344 (MainThread): Flushing usage events
+2020-06-26 15:35:48.368109 (MainThread): Running with dbt=0.17.0
+2020-06-26 15:35:48.886253 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile='springml', profiles_dir='/Users/medhapatil/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-06-26 15:35:48.887663 (MainThread): Tracking: tracking
+2020-06-26 15:35:48.901757 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bc73c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c4d3390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c4d3190>]}
+2020-06-26 15:35:48.956223 (MainThread): Partial parsing not enabled
+2020-06-26 15:35:48.959080 (MainThread): Parsing macros/core.sql
+2020-06-26 15:35:48.966721 (MainThread): Parsing macros/materializations/helpers.sql
+2020-06-26 15:35:48.976706 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-06-26 15:35:48.979499 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-06-26 15:35:49.002800 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-06-26 15:35:49.039981 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-06-26 15:35:49.066643 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-06-26 15:35:49.069878 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-06-26 15:35:49.078198 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-06-26 15:35:49.096898 (MainThread): Parsing macros/materializations/table/table.sql
+2020-06-26 15:35:49.105853 (MainThread): Parsing macros/materializations/view/view.sql
+2020-06-26 15:35:49.113974 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-06-26 15:35:49.120096 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-06-26 15:35:49.121609 (MainThread): Parsing macros/etc/query.sql
+2020-06-26 15:35:49.123499 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-06-26 15:35:49.126187 (MainThread): Parsing macros/etc/datetime.sql
+2020-06-26 15:35:49.137595 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-06-26 15:35:49.140448 (MainThread): Parsing macros/etc/get_custom_database.sql
+2020-06-26 15:35:49.143026 (MainThread): Parsing macros/adapters/common.sql
+2020-06-26 15:35:49.201234 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-06-26 15:35:49.203779 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-06-26 15:35:49.205888 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-06-26 15:35:49.208005 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-06-26 15:35:49.211740 (MainThread): Parsing macros/etc.sql
+2020-06-26 15:35:49.213038 (MainThread): Parsing macros/catalog.sql
+2020-06-26 15:35:49.220825 (MainThread): Parsing macros/adapters.sql
+2020-06-26 15:35:49.240432 (MainThread): Parsing macros/materializations/seed.sql
+2020-06-26 15:35:49.243428 (MainThread): Parsing macros/materializations/view.sql
+2020-06-26 15:35:49.246389 (MainThread): Parsing macros/materializations/table.sql
+2020-06-26 15:35:49.259161 (MainThread): Parsing macros/materializations/incremental.sql
+2020-06-26 15:35:49.275253 (MainThread): Parsing macros/materializations/snapshot.sql
+2020-06-26 15:35:49.300170 (MainThread): Partial parsing not enabled
+2020-06-26 15:35:49.342156 (MainThread): Acquiring new bigquery connection "model.springml_demo_dbt_project.payments".
+2020-06-26 15:35:49.342327 (MainThread): Opening a new connection, currently in state init
+2020-06-26 15:35:49.374644 (MainThread): Acquiring new bigquery connection "model.springml_demo_dbt_project.creditcard".
+2020-06-26 15:35:49.374811 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 15:35:49.504044 (MainThread): WARNING: Found documentation for resource "creditcards" which was not found or is disabled
+2020-06-26 15:35:49.571279 (MainThread): Found 2 models, 0 tests, 0 snapshots, 0 analyses, 147 macros, 0 operations, 1 seed file, 1 source
+2020-06-26 15:35:49.571964 (MainThread): 
+2020-06-26 15:35:49.572323 (MainThread): Acquiring new bigquery connection "master".
+2020-06-26 15:35:49.572416 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 15:35:49.576536 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_prismatic-cider-279015".
+2020-06-26 15:35:49.576818 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2020-06-26 15:35:49.579365 (ThreadPoolExecutor-0_0): Your application has authenticated using end user credentials from Google Cloud SDK. We recommend that most server applications use service accounts instead. If your application continues to use end user credentials from Cloud SDK, you might receive a "quota exceeded" or "API not enabled" error. For more information about service accounts, see https://cloud.google.com/docs/authentication/
+2020-06-26 15:35:51.395295 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_prismatic-cider-279015_springml_demo_dataset".
+2020-06-26 15:35:51.395620 (ThreadPoolExecutor-1_0): Re-using an available connection from the pool (formerly list_prismatic-cider-279015).
+2020-06-26 15:35:51.395838 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2020-06-26 15:35:51.540939 (MainThread): Acquiring new bigquery connection "master".
+2020-06-26 15:35:51.541151 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 15:35:51.541544 (MainThread): 11:35:51 | Concurrency: 1 threads (target='dev')
+2020-06-26 15:35:51.541758 (MainThread): 11:35:51 | 
+2020-06-26 15:35:51.544895 (Thread-1): Began running node model.springml_demo_dbt_project.creditcard
+2020-06-26 15:35:51.546464 (Thread-1): 11:35:51 | 1 of 2 START view model springml_demo_dataset.creditcard............. [RUN]
+2020-06-26 15:35:51.546889 (Thread-1): Acquiring new bigquery connection "model.springml_demo_dbt_project.creditcard".
+2020-06-26 15:35:51.546996 (Thread-1): Re-using an available connection from the pool (formerly list_prismatic-cider-279015_springml_demo_dataset).
+2020-06-26 15:35:51.547122 (Thread-1): Compiling model.springml_demo_dbt_project.creditcard
+2020-06-26 15:35:51.567996 (Thread-1): Writing injected SQL for node "model.springml_demo_dbt_project.creditcard"
+2020-06-26 15:35:51.568495 (Thread-1): finished collecting timing info
+2020-06-26 15:35:51.605843 (Thread-1): Writing runtime SQL for node "model.springml_demo_dbt_project.creditcard"
+2020-06-26 15:35:51.606359 (Thread-1): On model.springml_demo_dbt_project.creditcard: /* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.creditcard"} */
+
+
+  create or replace view `prismatic-cider-279015`.`springml_demo_dataset`.`creditcard`
+  OPTIONS()
+  as 
+
+select country,
+
+sum(case when payment_type = 'Amex' then 1 else 0 end) as Amex_payments,
+
+sum(case when payment_type = 'Mastercard' then 1 else 0 end) as Mastercard_payments,
+
+sum(case when payment_type = 'Visa' then 1 else 0 end) as Visa_payments,
+
+from `prismatic-cider-279015`.`springml_demo_dataset`.`sales`
+group by country;
+
+
+2020-06-26 15:35:52.158094 (Thread-1): finished collecting timing info
+2020-06-26 15:35:52.158919 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2bbb4cd6-30f1-4a28-8fa9-b527092fdc75', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c7ffc50>]}
+2020-06-26 15:35:52.160184 (Thread-1): 11:35:52 | 1 of 2 OK created view model springml_demo_dataset.creditcard........ [CREATE VIEW in 0.61s]
+2020-06-26 15:35:52.160343 (Thread-1): Finished running node model.springml_demo_dbt_project.creditcard
+2020-06-26 15:35:52.160552 (Thread-1): Began running node model.springml_demo_dbt_project.payments
+2020-06-26 15:35:52.161823 (Thread-1): 11:35:52 | 2 of 2 START view model springml_demo_dataset.payments............... [RUN]
+2020-06-26 15:35:52.162179 (Thread-1): Acquiring new bigquery connection "model.springml_demo_dbt_project.payments".
+2020-06-26 15:35:52.162282 (Thread-1): Re-using an available connection from the pool (formerly model.springml_demo_dbt_project.creditcard).
+2020-06-26 15:35:52.162384 (Thread-1): Compiling model.springml_demo_dbt_project.payments
+2020-06-26 15:35:52.173370 (Thread-1): Writing injected SQL for node "model.springml_demo_dbt_project.payments"
+2020-06-26 15:35:52.173874 (Thread-1): finished collecting timing info
+2020-06-26 15:35:52.178214 (Thread-1): Writing runtime SQL for node "model.springml_demo_dbt_project.payments"
+2020-06-26 15:35:52.178670 (Thread-1): On model.springml_demo_dbt_project.payments: /* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.payments"} */
+
+
+  create or replace view `prismatic-cider-279015`.`springml_demo_dataset`.`payments`
+  OPTIONS()
+  as select payment_type, 
+    count(*) as number_of_payments, 
+    sum(price) as total_price 
+from `prismatic-cider-279015`.`springml_demo_dataset`.`sales`
+where country like "United States"
+group by payment_type;
+
+
+2020-06-26 15:35:52.937028 (Thread-1): finished collecting timing info
+2020-06-26 15:35:52.937992 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2bbb4cd6-30f1-4a28-8fa9-b527092fdc75', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c8a4d10>]}
+2020-06-26 15:35:52.939544 (Thread-1): 11:35:52 | 2 of 2 OK created view model springml_demo_dataset.payments.......... [CREATE VIEW in 0.78s]
+2020-06-26 15:35:52.939784 (Thread-1): Finished running node model.springml_demo_dbt_project.payments
+2020-06-26 15:35:52.999536 (MainThread): Acquiring new bigquery connection "master".
+2020-06-26 15:35:52.999802 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 15:35:53.000319 (MainThread): 11:35:53 | 
+2020-06-26 15:35:53.000562 (MainThread): 11:35:53 | Finished running 2 view models in 3.43s.
+2020-06-26 15:35:53.000796 (MainThread): Connection 'master' was properly closed.
+2020-06-26 15:35:53.000991 (MainThread): Connection 'model.springml_demo_dbt_project.payments' was left open.
+2020-06-26 15:35:53.010927 (MainThread): 
+2020-06-26 15:35:53.011143 (MainThread): Completed successfully
+2020-06-26 15:35:53.011360 (MainThread): 
+Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+2020-06-26 15:35:53.011698 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c675a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c683250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c69f090>]}
+2020-06-26 15:35:53.011960 (MainThread): Flushing usage events
+2020-06-26 15:37:23.233831 (MainThread): Running with dbt=0.17.0
+2020-06-26 15:37:23.871712 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile='springml', profiles_dir='/Users/medhapatil/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-06-26 15:37:23.873247 (MainThread): Tracking: tracking
+2020-06-26 15:37:23.904826 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110638810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11064f4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11064f2d0>]}
+2020-06-26 15:37:23.958736 (MainThread): Partial parsing not enabled
+2020-06-26 15:37:23.962202 (MainThread): Parsing macros/core.sql
+2020-06-26 15:37:23.969568 (MainThread): Parsing macros/materializations/helpers.sql
+2020-06-26 15:37:23.981370 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-06-26 15:37:23.984426 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-06-26 15:37:24.007177 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-06-26 15:37:24.043929 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-06-26 15:37:24.070806 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-06-26 15:37:24.074197 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-06-26 15:37:24.084676 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-06-26 15:37:24.102978 (MainThread): Parsing macros/materializations/table/table.sql
+2020-06-26 15:37:24.112326 (MainThread): Parsing macros/materializations/view/view.sql
+2020-06-26 15:37:24.120762 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-06-26 15:37:24.127768 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-06-26 15:37:24.129452 (MainThread): Parsing macros/etc/query.sql
+2020-06-26 15:37:24.131577 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-06-26 15:37:24.134330 (MainThread): Parsing macros/etc/datetime.sql
+2020-06-26 15:37:24.145756 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-06-26 15:37:24.148891 (MainThread): Parsing macros/etc/get_custom_database.sql
+2020-06-26 15:37:24.151847 (MainThread): Parsing macros/adapters/common.sql
+2020-06-26 15:37:24.211291 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-06-26 15:37:24.213410 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-06-26 15:37:24.215439 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-06-26 15:37:24.217752 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-06-26 15:37:24.221410 (MainThread): Parsing macros/etc.sql
+2020-06-26 15:37:24.223205 (MainThread): Parsing macros/catalog.sql
+2020-06-26 15:37:24.231357 (MainThread): Parsing macros/adapters.sql
+2020-06-26 15:37:24.251051 (MainThread): Parsing macros/materializations/seed.sql
+2020-06-26 15:37:24.254107 (MainThread): Parsing macros/materializations/view.sql
+2020-06-26 15:37:24.257281 (MainThread): Parsing macros/materializations/table.sql
+2020-06-26 15:37:24.270376 (MainThread): Parsing macros/materializations/incremental.sql
+2020-06-26 15:37:24.287808 (MainThread): Parsing macros/materializations/snapshot.sql
+2020-06-26 15:37:24.312417 (MainThread): Partial parsing not enabled
+2020-06-26 15:37:24.355150 (MainThread): Acquiring new bigquery connection "model.springml_demo_dbt_project.payments".
+2020-06-26 15:37:24.355326 (MainThread): Opening a new connection, currently in state init
+2020-06-26 15:37:24.390711 (MainThread): Acquiring new bigquery connection "model.springml_demo_dbt_project.creditcard".
+2020-06-26 15:37:24.390878 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 15:37:24.528187 (MainThread): WARNING: Found documentation for resource "creditcards" which was not found or is disabled
+2020-06-26 15:37:24.596743 (MainThread): Found 2 models, 0 tests, 0 snapshots, 0 analyses, 147 macros, 0 operations, 1 seed file, 1 source
+2020-06-26 15:37:24.597501 (MainThread): 
+2020-06-26 15:37:24.597980 (MainThread): Acquiring new bigquery connection "master".
+2020-06-26 15:37:24.598093 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 15:37:24.602188 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_prismatic-cider-279015".
+2020-06-26 15:37:24.602350 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2020-06-26 15:37:24.606008 (ThreadPoolExecutor-0_0): Your application has authenticated using end user credentials from Google Cloud SDK. We recommend that most server applications use service accounts instead. If your application continues to use end user credentials from Cloud SDK, you might receive a "quota exceeded" or "API not enabled" error. For more information about service accounts, see https://cloud.google.com/docs/authentication/
+2020-06-26 15:37:26.534760 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_prismatic-cider-279015_springml_demo_dataset".
+2020-06-26 15:37:26.535096 (ThreadPoolExecutor-1_0): Re-using an available connection from the pool (formerly list_prismatic-cider-279015).
+2020-06-26 15:37:26.537599 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2020-06-26 15:37:26.672360 (MainThread): Acquiring new bigquery connection "master".
+2020-06-26 15:37:26.672573 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 15:37:26.672974 (MainThread): 11:37:26 | Concurrency: 1 threads (target='dev')
+2020-06-26 15:37:26.673176 (MainThread): 11:37:26 | 
+2020-06-26 15:37:26.677138 (Thread-1): Began running node model.springml_demo_dbt_project.creditcard
+2020-06-26 15:37:26.678714 (Thread-1): 11:37:26 | 1 of 2 START view model springml_demo_dataset.creditcard............. [RUN]
+2020-06-26 15:37:26.679234 (Thread-1): Acquiring new bigquery connection "model.springml_demo_dbt_project.creditcard".
+2020-06-26 15:37:26.679348 (Thread-1): Re-using an available connection from the pool (formerly list_prismatic-cider-279015_springml_demo_dataset).
+2020-06-26 15:37:26.679475 (Thread-1): Compiling model.springml_demo_dbt_project.creditcard
+2020-06-26 15:37:26.699021 (Thread-1): Writing injected SQL for node "model.springml_demo_dbt_project.creditcard"
+2020-06-26 15:37:26.700200 (Thread-1): finished collecting timing info
+2020-06-26 15:37:26.738075 (Thread-1): Writing runtime SQL for node "model.springml_demo_dbt_project.creditcard"
+2020-06-26 15:37:26.738649 (Thread-1): On model.springml_demo_dbt_project.creditcard: /* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.creditcard"} */
+
+
+  create or replace view `prismatic-cider-279015`.`springml_demo_dataset`.`creditcard`
+  OPTIONS()
+  as 
+
+select country,
+
+sum(case when payment_type = 'Amex' then 1 else 0 end) as Amex_payments,
+
+sum(case when payment_type = 'Mastercard' then 1 else 0 end) as Mastercard_payments,
+
+sum(case when payment_type = 'Visa' then 1 else 0 end) as Visa_payments,
+
+from `prismatic-cider-279015`.`springml_demo_dataset`.`sales`
+group by country 
+order by (Amex_payments+Mastercard_payments+Visa_payments) desc;
+
+
+2020-06-26 15:37:27.624166 (Thread-1): finished collecting timing info
+2020-06-26 15:37:27.625007 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9511ffe1-4254-49d0-9fa5-d8ba66cd5751', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110950f50>]}
+2020-06-26 15:37:27.626284 (Thread-1): 11:37:27 | 1 of 2 OK created view model springml_demo_dataset.creditcard........ [CREATE VIEW in 0.95s]
+2020-06-26 15:37:27.626454 (Thread-1): Finished running node model.springml_demo_dbt_project.creditcard
+2020-06-26 15:37:27.626674 (Thread-1): Began running node model.springml_demo_dbt_project.payments
+2020-06-26 15:37:27.627831 (Thread-1): 11:37:27 | 2 of 2 START view model springml_demo_dataset.payments............... [RUN]
+2020-06-26 15:37:27.628180 (Thread-1): Acquiring new bigquery connection "model.springml_demo_dbt_project.payments".
+2020-06-26 15:37:27.628290 (Thread-1): Re-using an available connection from the pool (formerly model.springml_demo_dbt_project.creditcard).
+2020-06-26 15:37:27.628400 (Thread-1): Compiling model.springml_demo_dbt_project.payments
+2020-06-26 15:37:27.639271 (Thread-1): Writing injected SQL for node "model.springml_demo_dbt_project.payments"
+2020-06-26 15:37:27.639768 (Thread-1): finished collecting timing info
+2020-06-26 15:37:27.644092 (Thread-1): Writing runtime SQL for node "model.springml_demo_dbt_project.payments"
+2020-06-26 15:37:27.644574 (Thread-1): On model.springml_demo_dbt_project.payments: /* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.payments"} */
+
+
+  create or replace view `prismatic-cider-279015`.`springml_demo_dataset`.`payments`
+  OPTIONS()
+  as select payment_type, 
+    count(*) as number_of_payments, 
+    sum(price) as total_price 
+from `prismatic-cider-279015`.`springml_demo_dataset`.`sales`
+where country like "United States"
+group by payment_type;
+
+
+2020-06-26 15:37:28.227375 (Thread-1): finished collecting timing info
+2020-06-26 15:37:28.228266 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9511ffe1-4254-49d0-9fa5-d8ba66cd5751', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11082cf10>]}
+2020-06-26 15:37:28.229856 (Thread-1): 11:37:28 | 2 of 2 OK created view model springml_demo_dataset.payments.......... [CREATE VIEW in 0.60s]
+2020-06-26 15:37:28.230062 (Thread-1): Finished running node model.springml_demo_dbt_project.payments
+2020-06-26 15:37:28.311586 (MainThread): Acquiring new bigquery connection "master".
+2020-06-26 15:37:28.311904 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 15:37:28.312633 (MainThread): 11:37:28 | 
+2020-06-26 15:37:28.312856 (MainThread): 11:37:28 | Finished running 2 view models in 3.71s.
+2020-06-26 15:37:28.313061 (MainThread): Connection 'master' was properly closed.
+2020-06-26 15:37:28.313214 (MainThread): Connection 'model.springml_demo_dbt_project.payments' was left open.
+2020-06-26 15:37:28.324213 (MainThread): 
+2020-06-26 15:37:28.324634 (MainThread): Completed successfully
+2020-06-26 15:37:28.324921 (MainThread): 
+Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+2020-06-26 15:37:28.325319 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1109cde10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110a79610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110a79b10>]}
+2020-06-26 15:37:28.325663 (MainThread): Flushing usage events
+2020-06-26 16:03:06.527775 (MainThread): Running with dbt=0.17.0
+2020-06-26 16:03:07.144932 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.generate.GenerateTask'>, compile=True, debug=False, exclude=None, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile='springml', profiles_dir='/Users/medhapatil/.dbt', project_dir=None, record_timing_info=None, rpc_method='docs.generate', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='generate', write_json=True)
+2020-06-26 16:03:07.150813 (MainThread): Tracking: tracking
+2020-06-26 16:03:07.176025 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ae2afd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b65f550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b65f350>]}
+2020-06-26 16:03:07.243905 (MainThread): Partial parsing not enabled
+2020-06-26 16:03:07.255292 (MainThread): Parsing macros/core.sql
+2020-06-26 16:03:07.263613 (MainThread): Parsing macros/materializations/helpers.sql
+2020-06-26 16:03:07.275567 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-06-26 16:03:07.278536 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-06-26 16:03:07.301233 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-06-26 16:03:07.347695 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-06-26 16:03:07.374905 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-06-26 16:03:07.378195 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-06-26 16:03:07.388031 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-06-26 16:03:07.406639 (MainThread): Parsing macros/materializations/table/table.sql
+2020-06-26 16:03:07.416606 (MainThread): Parsing macros/materializations/view/view.sql
+2020-06-26 16:03:07.425526 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-06-26 16:03:07.432945 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-06-26 16:03:07.435521 (MainThread): Parsing macros/etc/query.sql
+2020-06-26 16:03:07.437721 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-06-26 16:03:07.446852 (MainThread): Parsing macros/etc/datetime.sql
+2020-06-26 16:03:07.462133 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-06-26 16:03:07.465250 (MainThread): Parsing macros/etc/get_custom_database.sql
+2020-06-26 16:03:07.468949 (MainThread): Parsing macros/adapters/common.sql
+2020-06-26 16:03:07.540752 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-06-26 16:03:07.543253 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-06-26 16:03:07.545115 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-06-26 16:03:07.547627 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-06-26 16:03:07.552873 (MainThread): Parsing macros/etc.sql
+2020-06-26 16:03:07.554829 (MainThread): Parsing macros/catalog.sql
+2020-06-26 16:03:07.567725 (MainThread): Parsing macros/adapters.sql
+2020-06-26 16:03:07.602340 (MainThread): Parsing macros/materializations/seed.sql
+2020-06-26 16:03:07.606126 (MainThread): Parsing macros/materializations/view.sql
+2020-06-26 16:03:07.610033 (MainThread): Parsing macros/materializations/table.sql
+2020-06-26 16:03:07.627133 (MainThread): Parsing macros/materializations/incremental.sql
+2020-06-26 16:03:07.646462 (MainThread): Parsing macros/materializations/snapshot.sql
+2020-06-26 16:03:07.674641 (MainThread): Partial parsing not enabled
+2020-06-26 16:03:07.722453 (MainThread): Acquiring new bigquery connection "model.springml_demo_dbt_project.payments".
+2020-06-26 16:03:07.722610 (MainThread): Opening a new connection, currently in state init
+2020-06-26 16:03:07.759995 (MainThread): Acquiring new bigquery connection "model.springml_demo_dbt_project.creditcard".
+2020-06-26 16:03:07.760164 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 16:03:07.897529 (MainThread): WARNING: Found documentation for resource "creditcards" which was not found or is disabled
+2020-06-26 16:03:07.976233 (MainThread): Found 2 models, 0 tests, 0 snapshots, 0 analyses, 147 macros, 0 operations, 1 seed file, 1 source
+2020-06-26 16:03:07.977301 (MainThread): 
+2020-06-26 16:03:07.977849 (MainThread): Acquiring new bigquery connection "master".
+2020-06-26 16:03:07.977995 (MainThread): Opening a new connection, currently in state closed
+2020-06-26 16:03:07.984997 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_prismatic-cider-279015".
+2020-06-26 16:03:07.985282 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2020-06-26 16:03:07.988719 (ThreadPoolExecutor-0_0): Your application has authenticated using end user credentials from Google Cloud SDK. We recommend that most server applications use service accounts instead. If your application continues to use end user credentials from Cloud SDK, you might receive a "quota exceeded" or "API not enabled" error. For more information about service accounts, see https://cloud.google.com/docs/authentication/
+2020-06-26 16:03:10.930979 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_prismatic-cider-279015_springml_demo_dataset".
+2020-06-26 16:03:10.931357 (ThreadPoolExecutor-1_0): Re-using an available connection from the pool (formerly list_prismatic-cider-279015).
+2020-06-26 16:03:10.931566 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2020-06-26 16:03:11.068460 (MainThread): 12:03:11 | Concurrency: 1 threads (target='dev')
+2020-06-26 16:03:11.068718 (MainThread): 12:03:11 | 
+2020-06-26 16:03:11.072273 (Thread-1): Began running node model.springml_demo_dbt_project.creditcard
+2020-06-26 16:03:11.072786 (Thread-1): Acquiring new bigquery connection "model.springml_demo_dbt_project.creditcard".
+2020-06-26 16:03:11.072925 (Thread-1): Re-using an available connection from the pool (formerly list_prismatic-cider-279015_springml_demo_dataset).
+2020-06-26 16:03:11.073097 (Thread-1): Compiling model.springml_demo_dbt_project.creditcard
+2020-06-26 16:03:11.093222 (Thread-1): Writing injected SQL for node "model.springml_demo_dbt_project.creditcard"
+2020-06-26 16:03:11.095186 (Thread-1): finished collecting timing info
+2020-06-26 16:03:11.095710 (Thread-1): finished collecting timing info
+2020-06-26 16:03:11.096282 (Thread-1): Finished running node model.springml_demo_dbt_project.creditcard
+2020-06-26 16:03:11.096451 (Thread-1): Began running node model.springml_demo_dbt_project.payments
+2020-06-26 16:03:11.096753 (Thread-1): Acquiring new bigquery connection "model.springml_demo_dbt_project.payments".
+2020-06-26 16:03:11.096862 (Thread-1): Re-using an available connection from the pool (formerly model.springml_demo_dbt_project.creditcard).
+2020-06-26 16:03:11.096962 (Thread-1): Compiling model.springml_demo_dbt_project.payments
+2020-06-26 16:03:11.111881 (Thread-1): Writing injected SQL for node "model.springml_demo_dbt_project.payments"
+2020-06-26 16:03:11.112346 (Thread-1): finished collecting timing info
+2020-06-26 16:03:11.112606 (Thread-1): finished collecting timing info
+2020-06-26 16:03:11.113013 (Thread-1): Finished running node model.springml_demo_dbt_project.payments
+2020-06-26 16:03:11.113150 (Thread-1): Began running node seed.springml_demo_dbt_project.datafile_sales
+2020-06-26 16:03:11.113410 (Thread-1): Acquiring new bigquery connection "seed.springml_demo_dbt_project.datafile_sales".
+2020-06-26 16:03:11.113499 (Thread-1): Re-using an available connection from the pool (formerly model.springml_demo_dbt_project.payments).
+2020-06-26 16:03:11.113671 (Thread-1): Compiling seed.springml_demo_dbt_project.datafile_sales
+2020-06-26 16:03:11.125907 (Thread-1): finished collecting timing info
+2020-06-26 16:03:11.126413 (Thread-1): finished collecting timing info
+2020-06-26 16:03:11.126950 (Thread-1): Finished running node seed.springml_demo_dbt_project.datafile_sales
+2020-06-26 16:03:11.173347 (MainThread): Connection 'master' was properly closed.
+2020-06-26 16:03:11.173760 (MainThread): Connection 'seed.springml_demo_dbt_project.datafile_sales' was left open.
+2020-06-26 16:03:11.189412 (MainThread): 12:03:11 | Done.
+2020-06-26 16:03:11.219754 (MainThread): Acquiring new bigquery connection "generate_catalog".
+2020-06-26 16:03:11.220042 (MainThread): Opening a new connection, currently in state init
+2020-06-26 16:03:11.220208 (MainThread): 12:03:11 | Building catalog
+2020-06-26 16:03:11.231700 (MainThread): Your application has authenticated using end user credentials from Google Cloud SDK. We recommend that most server applications use service accounts instead. If your application continues to use end user credentials from Cloud SDK, you might receive a "quota exceeded" or "API not enabled" error. For more information about service accounts, see https://cloud.google.com/docs/authentication/
+2020-06-26 16:03:12.108763 (ThreadPoolExecutor-2_0): Acquiring new bigquery connection "prismatic-cider-279015.information_schema".
+2020-06-26 16:03:12.109234 (ThreadPoolExecutor-2_0): Opening a new connection, currently in state init
+2020-06-26 16:03:12.129720 (ThreadPoolExecutor-2_0): Your application has authenticated using end user credentials from Google Cloud SDK. We recommend that most server applications use service accounts instead. If your application continues to use end user credentials from Cloud SDK, you might receive a "quota exceeded" or "API not enabled" error. For more information about service accounts, see https://cloud.google.com/docs/authentication/
+2020-06-26 16:03:12.695021 (ThreadPoolExecutor-2_0): On prismatic-cider-279015.information_schema: /* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "connection_name": "prismatic-cider-279015.information_schema"} */
+
+    with tables as (
+        select
+            project_id as table_database,
+            dataset_id as table_schema,
+            table_id as original_table_name,
+
+            concat(project_id, '.', dataset_id, '.', table_id) as relation_id,
+
+            row_count,
+            size_bytes as size_bytes,
+            case
+                when type = 1 then 'table'
+                when type = 2 then 'view'
+                else 'external'
+            end as table_type,
+
+            REGEXP_CONTAINS(table_id, '^.+[0-9]{8}$') and coalesce(type, 0) = 1 as is_date_shard,
+            REGEXP_EXTRACT(table_id, '^(.+)[0-9]{8}$') as shard_base_name,
+            REGEXP_EXTRACT(table_id, '^.+([0-9]{8})$') as shard_name
+
+        from `prismatic-cider-279015`.`springml_demo_dataset`.__TABLES__
+        where (upper(dataset_id) = upper('springml_demo_dataset'))
+    ),
+
+    extracted as (
+
+        select *,
+            case
+                when is_date_shard then shard_base_name
+                else original_table_name
+            end as table_name
+
+        from tables
+
+    ),
+
+    unsharded_tables as (
+
+        select
+            table_database,
+            table_schema,
+            table_name,
+            coalesce(table_type, 'external') as table_type,
+            is_date_shard,
+
+            struct(
+                min(shard_name) as shard_min,
+                max(shard_name) as shard_max,
+                count(*) as shard_count
+            ) as table_shards,
+
+            sum(size_bytes) as size_bytes,
+            sum(row_count) as row_count,
+
+            max(relation_id) as relation_id
+
+        from extracted
+        group by 1,2,3,4,5
+
+    ),
+
+    info_schema_columns as (
+
+        select
+            concat(table_catalog, '.', table_schema, '.', table_name) as relation_id,
+            table_catalog as table_database,
+            table_schema,
+            table_name,
+
+            -- use the "real" column name from the paths query below
+            column_name as base_column_name,
+            ordinal_position as column_index,
+            cast(null as string) as column_comment,
+
+            is_partitioning_column,
+            clustering_ordinal_position
+
+        from `prismatic-cider-279015`.`springml_demo_dataset`.INFORMATION_SCHEMA.COLUMNS
+        where ordinal_position is not null
+
+    ),
+
+    info_schema_column_paths as (
+
+        select
+            concat(table_catalog, '.', table_schema, '.', table_name) as relation_id,
+            field_path as column_name,
+            data_type as column_type,
+            column_name as base_column_name
+
+        from `prismatic-cider-279015`.`springml_demo_dataset`.INFORMATION_SCHEMA.COLUMN_FIELD_PATHS
+        where data_type not like 'STRUCT%'
+
+    ),
+
+    columns as (
+
+        select * except (base_column_name)
+        from info_schema_columns
+        join info_schema_column_paths using (relation_id, base_column_name)
+
+    ),
+
+    column_stats as (
+
+        select
+            table_database,
+            table_schema,
+            table_name,
+            max(relation_id) as relation_id,
+            max(case when is_partitioning_column = 'YES' then 1 else 0 end) = 1 as is_partitioned,
+            max(case when is_partitioning_column = 'YES' then column_name else null end) as partition_column,
+            max(case when clustering_ordinal_position is not null then 1 else 0 end) = 1 as is_clustered,
+            array_to_string(
+                array_agg(
+                    case
+                        when clustering_ordinal_position is not null then column_name
+                        else null
+                    end ignore nulls
+                    order by clustering_ordinal_position
+                ), ', '
+            ) as clustering_columns
+
+        from columns
+        group by 1,2,3
+
+    )
+
+    select
+        unsharded_tables.table_database,
+        unsharded_tables.table_schema,
+        case
+            when is_date_shard then concat(unsharded_tables.table_name, '*')
+            else unsharded_tables.table_name
+        end as table_name,
+        unsharded_tables.table_type,
+
+        -- coalesce name and type for External tables - these columns are not
+        -- present in the COLUMN_FIELD_PATHS resultset
+        coalesce(columns.column_name, '<unknown>') as column_name,
+        -- invent a row number to account for nested fields -- BQ does
+        -- not treat these nested properties as independent fields
+        row_number() over (
+            partition by relation_id
+            order by columns.column_index, columns.column_name
+        ) as column_index,
+        coalesce(columns.column_type, '<unknown>') as column_type,
+        columns.column_comment,
+
+        'Shard count' as `stats__date_shards__label`,
+        table_shards.shard_count as `stats__date_shards__value`,
+        'The number of date shards in this table' as `stats__date_shards__description`,
+        is_date_shard as `stats__date_shards__include`,
+
+        'Shard (min)' as `stats__date_shard_min__label`,
+        table_shards.shard_min as `stats__date_shard_min__value`,
+        'The first date shard in this table' as `stats__date_shard_min__description`,
+        is_date_shard as `stats__date_shard_min__include`,
+
+        'Shard (max)' as `stats__date_shard_max__label`,
+        table_shards.shard_max as `stats__date_shard_max__value`,
+        'The last date shard in this table' as `stats__date_shard_max__description`,
+        is_date_shard as `stats__date_shard_max__include`,
+
+        '# Rows' as `stats__num_rows__label`,
+        row_count as `stats__num_rows__value`,
+        'Approximate count of rows in this table' as `stats__num_rows__description`,
+        (unsharded_tables.table_type = 'table') as `stats__num_rows__include`,
+
+        'Approximate Size' as `stats__num_bytes__label`,
+        size_bytes as `stats__num_bytes__value`,
+        'Approximate size of table as reported by BigQuery' as `stats__num_bytes__description`,
+        (unsharded_tables.table_type = 'table') as `stats__num_bytes__include`,
+
+        'Partitioned By' as `stats__partitioning_type__label`,
+        partition_column as `stats__partitioning_type__value`,
+        'The partitioning column for this table' as `stats__partitioning_type__description`,
+        is_partitioned as `stats__partitioning_type__include`,
+
+        'Clustered By' as `stats__clustering_fields__label`,
+        clustering_columns as `stats__clustering_fields__value`,
+        'The clustering columns for this table' as `stats__clustering_fields__description`,
+        is_clustered as `stats__clustering_fields__include`
+
+    -- join using relation_id (an actual relation, not a shard prefix) to make
+    -- sure that column metadata is picked up through the join. This will only
+    -- return the column information for the "max" table in a date-sharded table set
+    from unsharded_tables
+    left join columns using (relation_id)
+    left join column_stats using (relation_id)
+  
+2020-06-26 16:03:20.970503 (MainThread): 12:03:20 | Catalog written to /Users/medhapatil/springml/springml_demo_dbt/target/catalog.json
+2020-06-26 16:03:20.971101 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bb2a050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bb2a0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bb2a150>]}
+2020-06-26 16:03:20.971445 (MainThread): Flushing usage events
+2020-06-26 16:03:21.394367 (MainThread): Connection 'generate_catalog' was left open.
+2020-06-26 16:03:21.394575 (MainThread): Connection 'prismatic-cider-279015.information_schema' was left open.
+2020-06-26 16:03:28.309935 (MainThread): Running with dbt=0.17.0
+2020-06-26 16:03:28.836402 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.serve.ServeTask'>, debug=False, log_cache_events=False, log_format='default', open_browser=True, partial_parse=None, port=8001, profile='springml', profiles_dir='/Users/medhapatil/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, single_threaded=False, strict=False, target=None, test_new_parser=False, use_cache=True, vars='{}', warn_error=False, which='serve', write_json=True)
+2020-06-26 16:03:28.837378 (MainThread): Tracking: tracking
+2020-06-26 16:03:28.851057 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d5bdb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d5d2510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d5d2310>]}
+2020-06-26 16:03:28.855072 (MainThread): Serving docs at 0.0.0.0:8001
+2020-06-26 16:03:28.855383 (MainThread): To access from your browser, navigate to:  http://localhost:8001
+2020-06-26 16:03:28.855512 (MainThread): Press Ctrl+C to exit.
+
+
+2020-06-26 16:21:56.199844 (MainThread): Flushing usage events
+2020-06-26 16:21:56.670099 (MainThread): ctrl-c

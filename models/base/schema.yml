@@ -27,3 +27,12 @@ models:
           description: "Payment type: Credit or cash"
         - name: number_of_payments
         - name: total_price
+    
+    - name: creditcards
+      description: "Viewing credit card payment counts by country"
+      columns:
+        - name: country
+        - name: Amex_payments
+        - name: Mastercard_payments
+        - name: Visa_payments
+    
