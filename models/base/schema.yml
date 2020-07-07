@@ -25,14 +25,30 @@ models:
       columns:
         - name: payment_type
           description: "Payment type: Credit or cash"
+          tests:
+            - accepted_values:
+                values: ['Mastercard', 'Amex', 'Visa', 'Diners']
         - name: number_of_payments
+          tests:
+            - not_null
         - name: total_price
+          tests:
+            - not_null
     
     - name: creditcards
       description: "Viewing credit card payment counts by country"
       columns:
         - name: country
+          tests:
+            - unique
+            - not_null
         - name: Amex_payments
+          tests:
+            - not_null
         - name: Mastercard_payments
+          tests:
+            - not_null
         - name: Visa_payments
+          tests:
+            - not_null
     
