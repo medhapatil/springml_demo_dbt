@@ -2,6 +2,4 @@
 
 select country
 from {{ ref('creditcard' )}}
-where Amex_payments = 0 
-and	Mastercard_payments = 0 
-and	 Visa_payments = 0
+where Amex_payments = 0 and	Mastercard_payments = 0 and	 Visa_payments = 0
