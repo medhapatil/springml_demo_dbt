@@ -35,7 +35,7 @@ models:
           tests:
             - not_null
     
-    - name: creditcards
+    - name: creditcard
       description: "Viewing credit card payment counts by country"
       columns:
         - name: country

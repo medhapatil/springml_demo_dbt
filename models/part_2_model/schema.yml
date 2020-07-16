@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: springml_demo_dataset
+    tables:
+        - name: applicant_data
+          description: 'Applicant PII data'
+          columns:
+            - name: Employee_no
+            - name: Surname
+            - name: Given_name
+            - name: Gender
+            - name: City
+            - name: Age
+            - name: Year_joined
+            - name: Phone_no
+            - name: Social_insurance_no
+            
+models:
+    - name: gender_count
+      description: "Number of female and male applicants hired 5 years ago from today"
+      columns:
+        - name: Ingestion_date
+        - name: Female_count
+        - name: Male_count
+    
+    
