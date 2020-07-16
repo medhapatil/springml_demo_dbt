@@ -17,7 +17,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   springml_demo_dbt_project:
-      part_1_model:
+      base:
           materialized: view
-      part_2_model:
+      redaction:
           materialized: view
