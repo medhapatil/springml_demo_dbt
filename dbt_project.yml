@@ -19,5 +19,6 @@ models:
   springml_demo_dbt_project:
       base:
           materialized: view
-      redaction:
+      applicant:
           materialized: view
+
