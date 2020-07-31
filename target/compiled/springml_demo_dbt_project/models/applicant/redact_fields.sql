@@ -12,7 +12,7 @@ casted as (
 	from source
 ),
 
-casted_edited as (
+casted_redacted as (
 	select
 		Emp_no,
 		'##ARCHIVED##' as Phone_no,
@@ -20,7 +20,7 @@ casted_edited as (
 	from casted
 ),
 
-edited as (
+redacted as (
 	select
 		Employee_no,
 		'##ARCHIVED##' as Surname,
@@ -33,14 +33,18 @@ edited as (
 		source
 )
 
-select edited.Employee_no,
-edited.Surname,
-edited.Given_name,
-edited.Gender,
-edited.City,
-edited.Age,
-edited.Year_joined,
-casted_edited.Phone_no,
-casted_edited.Social_insurance_no
-from edited
-join casted_edited on edited.Employee_no = casted_edited.Emp_no
+select 
+	redacted.Employee_no,
+	redacted.Surname,
+	redacted.Given_name,
+	redacted.Gender,
+	redacted.City,
+	redacted.Age,
+	redacted.Year_joined,
+	casted_redacted.Phone_no,
+	casted_redacted.Social_insurance_no
+from 
+	redacted
+join 
+	casted_redacted 
+		on redacted.Employee_no = casted_redacted.Emp_no

@@ -20,5 +20,5 @@ models:
       base:
           materialized: view
       applicant:
-          materialized: view
+          materialized: table
 
