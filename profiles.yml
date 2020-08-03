@@ -1,0 +1,9 @@
+springml:
+    target: dev
+    outputs:
+        dev:
+          type: bigquery
+          method: oauth
+          project: prismatic-cider-279015
+          dataset: springml_demo_dataset
+          location: US
