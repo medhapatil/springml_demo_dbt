@@ -15922,3 +15922,984 @@ dbt.exceptions.RuntimeException: Runtime Error in model redact_fields (models/ap
 Done. PASS=0 WARN=0 ERROR=4 SKIP=0 TOTAL=4
 2020-08-03 15:03:35.810739 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c6eb610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c6eb5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c664290>]}
 2020-08-03 15:03:35.811168 (MainThread): Flushing usage events
+2020-08-05 18:47:58.112000 (MainThread): Running with dbt=0.17.0
+2020-08-05 18:47:59.652382 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/Users/medhapatil/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2020-08-05 18:47:59.654219 (MainThread): Tracking: tracking
+2020-08-05 18:47:59.722011 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e861510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e877a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e877890>]}
+2020-08-05 18:47:59.747406 (MainThread): Partial parsing not enabled
+2020-08-05 18:47:59.751545 (MainThread): Parsing macros/core.sql
+2020-08-05 18:47:59.766094 (MainThread): Parsing macros/materializations/helpers.sql
+2020-08-05 18:47:59.778077 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-08-05 18:47:59.780714 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2020-08-05 18:47:59.802424 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2020-08-05 18:47:59.838732 (MainThread): Parsing macros/materializations/seed/seed.sql
+2020-08-05 18:47:59.865254 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2020-08-05 18:47:59.868566 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2020-08-05 18:47:59.877603 (MainThread): Parsing macros/materializations/common/merge.sql
+2020-08-05 18:47:59.894896 (MainThread): Parsing macros/materializations/table/table.sql
+2020-08-05 18:47:59.903584 (MainThread): Parsing macros/materializations/view/view.sql
+2020-08-05 18:47:59.911538 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-08-05 18:47:59.917679 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2020-08-05 18:47:59.919362 (MainThread): Parsing macros/etc/query.sql
+2020-08-05 18:47:59.921276 (MainThread): Parsing macros/etc/is_incremental.sql
+2020-08-05 18:47:59.923934 (MainThread): Parsing macros/etc/datetime.sql
+2020-08-05 18:47:59.935076 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2020-08-05 18:47:59.938639 (MainThread): Parsing macros/etc/get_custom_database.sql
+2020-08-05 18:47:59.941789 (MainThread): Parsing macros/adapters/common.sql
+2020-08-05 18:47:59.999950 (MainThread): Parsing macros/schema_tests/relationships.sql
+2020-08-05 18:48:00.002117 (MainThread): Parsing macros/schema_tests/not_null.sql
+2020-08-05 18:48:00.010853 (MainThread): Parsing macros/schema_tests/unique.sql
+2020-08-05 18:48:00.012893 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2020-08-05 18:48:00.017152 (MainThread): Parsing macros/etc.sql
+2020-08-05 18:48:00.018615 (MainThread): Parsing macros/catalog.sql
+2020-08-05 18:48:00.026770 (MainThread): Parsing macros/adapters.sql
+2020-08-05 18:48:00.046121 (MainThread): Parsing macros/materializations/seed.sql
+2020-08-05 18:48:00.049192 (MainThread): Parsing macros/materializations/view.sql
+2020-08-05 18:48:00.052156 (MainThread): Parsing macros/materializations/table.sql
+2020-08-05 18:48:00.065328 (MainThread): Parsing macros/materializations/incremental.sql
+2020-08-05 18:48:00.082414 (MainThread): Parsing macros/materializations/snapshot.sql
+2020-08-05 18:48:00.106541 (MainThread): Partial parsing not enabled
+2020-08-05 18:48:00.151237 (MainThread): Acquiring new bigquery connection "model.springml_demo_dbt_project.redact_fields".
+2020-08-05 18:48:00.151419 (MainThread): Opening a new connection, currently in state init
+2020-08-05 18:48:00.187463 (MainThread): Acquiring new bigquery connection "model.springml_demo_dbt_project.gender_count".
+2020-08-05 18:48:00.187628 (MainThread): Opening a new connection, currently in state closed
+2020-08-05 18:48:00.201252 (MainThread): Acquiring new bigquery connection "model.springml_demo_dbt_project.payments".
+2020-08-05 18:48:00.201403 (MainThread): Opening a new connection, currently in state closed
+2020-08-05 18:48:00.216221 (MainThread): Acquiring new bigquery connection "model.springml_demo_dbt_project.creditcard".
+2020-08-05 18:48:00.216374 (MainThread): Opening a new connection, currently in state closed
+2020-08-05 18:48:00.278149 (MainThread): Acquiring new bigquery connection "test.springml_demo_dbt_project.creditcardtest".
+2020-08-05 18:48:00.278334 (MainThread): Opening a new connection, currently in state closed
+2020-08-05 18:48:00.693610 (MainThread): Found 4 models, 9 tests, 0 snapshots, 0 analyses, 147 macros, 0 operations, 2 seed files, 2 sources
+2020-08-05 18:48:00.695719 (MainThread): 
+2020-08-05 18:48:00.696220 (MainThread): Acquiring new bigquery connection "master".
+2020-08-05 18:48:00.696372 (MainThread): Opening a new connection, currently in state closed
+2020-08-05 18:48:00.702648 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_prismatic-cider-279015".
+2020-08-05 18:48:00.702804 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2020-08-05 18:48:00.706761 (ThreadPoolExecutor-0_0): Your application has authenticated using end user credentials from Google Cloud SDK. We recommend that most server applications use service accounts instead. If your application continues to use end user credentials from Cloud SDK, you might receive a "quota exceeded" or "API not enabled" error. For more information about service accounts, see https://cloud.google.com/docs/authentication/
+2020-08-05 18:48:04.631496 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_prismatic-cider-279015_springml_demo_dataset".
+2020-08-05 18:48:04.631774 (ThreadPoolExecutor-1_0): Re-using an available connection from the pool (formerly list_prismatic-cider-279015).
+2020-08-05 18:48:04.631949 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2020-08-05 18:48:04.757484 (MainThread): Acquiring new bigquery connection "master".
+2020-08-05 18:48:04.757691 (MainThread): Opening a new connection, currently in state closed
+2020-08-05 18:48:04.758089 (MainThread): 14:48:04 | Concurrency: 1 threads (target='dev')
+2020-08-05 18:48:04.758311 (MainThread): 14:48:04 | 
+2020-08-05 18:48:04.762661 (Thread-1): Began running node model.springml_demo_dbt_project.creditcard
+2020-08-05 18:48:04.764229 (Thread-1): 14:48:04 | 1 of 4 START view model springml_demo_dataset.creditcard............. [RUN]
+2020-08-05 18:48:04.764700 (Thread-1): Acquiring new bigquery connection "model.springml_demo_dbt_project.creditcard".
+2020-08-05 18:48:04.764846 (Thread-1): Re-using an available connection from the pool (formerly list_prismatic-cider-279015_springml_demo_dataset).
+2020-08-05 18:48:04.765007 (Thread-1): Compiling model.springml_demo_dbt_project.creditcard
+2020-08-05 18:48:04.788046 (Thread-1): Writing injected SQL for node "model.springml_demo_dbt_project.creditcard"
+2020-08-05 18:48:04.789672 (Thread-1): finished collecting timing info
+2020-08-05 18:48:04.826902 (Thread-1): Writing runtime SQL for node "model.springml_demo_dbt_project.creditcard"
+2020-08-05 18:48:04.827493 (Thread-1): On model.springml_demo_dbt_project.creditcard: /* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.creditcard"} */
+
+
+  create or replace view `prismatic-cider-279015`.`springml_demo_dataset`.`creditcard`
+  OPTIONS()
+  as 
+
+select country,
+
+sum(case when payment_type = 'Amex' then 1 else 0 end) as Amex_payments,
+
+sum(case when payment_type = 'Mastercard' then 1 else 0 end) as Mastercard_payments,
+
+sum(case when payment_type = 'Visa' then 1 else 0 end) as Visa_payments,
+
+from `prismatic-cider-279015`.`springml_demo_dataset`.`sales`
+group by country 
+having not (Amex_payments = 0 
+and	Mastercard_payments = 0 
+and	 Visa_payments = 0)
+order by (Amex_payments + Mastercard_payments + Visa_payments) desc;
+
+
+2020-08-05 18:48:05.731434 (Thread-1): Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.creditcard"} */
+
+
+  create or replace view `prismatic-cider-279015`.`springml_demo_dataset`.`creditcard`
+  OPTIONS()
+  as 
+
+select country,
+
+sum(case when payment_type = 'Amex' then 1 else 0 end) as Amex_payments,
+
+sum(case when payment_type = 'Mastercard' then 1 else 0 end) as Mastercard_payments,
+
+sum(case when payment_type = 'Visa' then 1 else 0 end) as Visa_payments,
+
+from `prismatic-cider-279015`.`springml_demo_dataset`.`sales`
+group by country 
+having not (Amex_payments = 0 
+and	Mastercard_payments = 0 
+and	 Visa_payments = 0)
+order by (Amex_payments + Mastercard_payments + Visa_payments) desc;
+
+
+2020-08-05 18:48:05.731646 (Thread-1): 404 Not found: Table prismatic-cider-279015:springml_demo_dataset.sales was not found in location US
+
+(job ID: 82e053d6-35a2-400a-a71a-91567bf567a2)
+
+                                                               -----Query Job SQL Follows-----                                                               
+
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+   1:/* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.creditcard"} */
+   2:
+   3:
+   4:  create or replace view `prismatic-cider-279015`.`springml_demo_dataset`.`creditcard`
+   5:  OPTIONS()
+   6:  as 
+   7:
+   8:select country,
+   9:
+  10:sum(case when payment_type = 'Amex' then 1 else 0 end) as Amex_payments,
+  11:
+  12:sum(case when payment_type = 'Mastercard' then 1 else 0 end) as Mastercard_payments,
+  13:
+  14:sum(case when payment_type = 'Visa' then 1 else 0 end) as Visa_payments,
+  15:
+  16:from `prismatic-cider-279015`.`springml_demo_dataset`.`sales`
+  17:group by country 
+  18:having not (Amex_payments = 0 
+  19:and	Mastercard_payments = 0 
+  20:and	 Visa_payments = 0)
+  21:order by (Amex_payments + Mastercard_payments + Visa_payments) desc;
+  22:
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+2020-08-05 18:48:05.732054 (Thread-1): finished collecting timing info
+2020-08-05 18:48:05.732850 (Thread-1): Runtime Error in model creditcard (models/base/creditcard.sql)
+  404 Not found: Table prismatic-cider-279015:springml_demo_dataset.sales was not found in location US
+  
+  (job ID: 82e053d6-35a2-400a-a71a-91567bf567a2)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 84, in exception_handler
+    yield
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 363, in _retry_and_handle
+    deadline=None)
+  File "/usr/local/lib/python3.7/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 225, in fn
+    return self._query_and_results(client, sql, conn, job_params)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 352, in _query_and_results
+    iterator = query_job.result(timeout=timeout)
+  File "/usr/local/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 3196, in result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/usr/local/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 818, in result
+    return super(_AsyncJob, self).result(timeout=timeout)
+  File "/usr/local/lib/python3.7/site-packages/google/api_core/future/polling.py", line 127, in result
+    raise self._exception
+google.api_core.exceptions.NotFound: 404 Not found: Table prismatic-cider-279015:springml_demo_dataset.sales was not found in location US
+
+(job ID: 82e053d6-35a2-400a-a71a-91567bf567a2)
+
+                                                               -----Query Job SQL Follows-----                                                               
+
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+   1:/* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.creditcard"} */
+   2:
+   3:
+   4:  create or replace view `prismatic-cider-279015`.`springml_demo_dataset`.`creditcard`
+   5:  OPTIONS()
+   6:  as 
+   7:
+   8:select country,
+   9:
+  10:sum(case when payment_type = 'Amex' then 1 else 0 end) as Amex_payments,
+  11:
+  12:sum(case when payment_type = 'Mastercard' then 1 else 0 end) as Mastercard_payments,
+  13:
+  14:sum(case when payment_type = 'Visa' then 1 else 0 end) as Visa_payments,
+  15:
+  16:from `prismatic-cider-279015`.`springml_demo_dataset`.`sales`
+  17:group by country 
+  18:having not (Amex_payments = 0 
+  19:and	Mastercard_payments = 0 
+  20:and	 Visa_payments = 0)
+  21:order by (Amex_payments + Mastercard_payments + Visa_payments) desc;
+  22:
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 228, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 171, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 273, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 459, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 296, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 226, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 21, in macro
+  File "/usr/local/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 296, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 226, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 65, in macro
+  File "/usr/local/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 296, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 226, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/base/impl.py", line 228, in execute
+    fetch=fetch
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 234, in execute
+    query_job, iterator = self.raw_execute(sql, fetch=fetch)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 227, in raw_execute
+    query_job, iterator = self._retry_and_handle(msg=sql, conn=conn, fn=fn)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 363, in _retry_and_handle
+    deadline=None)
+  File "/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 107, in exception_handler
+    raise RuntimeException(exc_message)
+dbt.exceptions.RuntimeException: Runtime Error in model creditcard (models/base/creditcard.sql)
+  404 Not found: Table prismatic-cider-279015:springml_demo_dataset.sales was not found in location US
+  
+  (job ID: 82e053d6-35a2-400a-a71a-91567bf567a2)
+2020-08-05 18:48:05.782545 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '388ec8e6-c024-4b54-a421-803c06bc9970', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ed93d10>]}
+2020-08-05 18:48:05.784677 (Thread-1): 14:48:05 | 1 of 4 ERROR creating view model springml_demo_dataset.creditcard.... [ERROR in 1.02s]
+2020-08-05 18:48:05.784916 (Thread-1): Finished running node model.springml_demo_dbt_project.creditcard
+2020-08-05 18:48:05.785199 (Thread-1): Began running node model.springml_demo_dbt_project.gender_count
+2020-08-05 18:48:05.786592 (Thread-1): 14:48:05 | 2 of 4 START table model springml_demo_dataset.gender_count.......... [RUN]
+2020-08-05 18:48:05.787071 (Thread-1): Acquiring new bigquery connection "model.springml_demo_dbt_project.gender_count".
+2020-08-05 18:48:05.787222 (Thread-1): Re-using an available connection from the pool (formerly model.springml_demo_dbt_project.creditcard).
+2020-08-05 18:48:05.787360 (Thread-1): Compiling model.springml_demo_dbt_project.gender_count
+2020-08-05 18:48:05.798274 (Thread-1): Writing injected SQL for node "model.springml_demo_dbt_project.gender_count"
+2020-08-05 18:48:05.798789 (Thread-1): finished collecting timing info
+2020-08-05 18:48:05.818406 (Thread-1): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2020-08-05 18:48:06.057343 (Thread-1): Writing runtime SQL for node "model.springml_demo_dbt_project.gender_count"
+2020-08-05 18:48:06.057869 (Thread-1): On model.springml_demo_dbt_project.gender_count: /* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.gender_count"} */
+
+
+  create or replace table `prismatic-cider-279015`.`springml_demo_dataset`.`gender_count`
+  
+  
+  OPTIONS()
+  as (
+    select
+    CURRENT_DATE() as Ingestion_date, 
+    countif(source.Gender is not null and source.Gender = "F") as Female_count,
+    countif(source.Gender is not null and source.Gender = "M") as Male_count,
+from 
+    `prismatic-cider-279015`.`springml_demo_dataset`.`applicant_data` as source
+  );
+    
+2020-08-05 18:48:06.237905 (Thread-1): Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.gender_count"} */
+
+
+  create or replace table `prismatic-cider-279015`.`springml_demo_dataset`.`gender_count`
+  
+  
+  OPTIONS()
+  as (
+    select
+    CURRENT_DATE() as Ingestion_date, 
+    countif(source.Gender is not null and source.Gender = "F") as Female_count,
+    countif(source.Gender is not null and source.Gender = "M") as Male_count,
+from 
+    `prismatic-cider-279015`.`springml_demo_dataset`.`applicant_data` as source
+  );
+    
+2020-08-05 18:48:06.238115 (Thread-1): 404 Not found: Table prismatic-cider-279015:springml_demo_dataset.applicant_data was not found in location US
+
+(job ID: d8caf74e-df4a-4128-bf08-e6a251d708d4)
+
+                                                                -----Query Job SQL Follows-----                                                                
+
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+   1:/* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.gender_count"} */
+   2:
+   3:
+   4:  create or replace table `prismatic-cider-279015`.`springml_demo_dataset`.`gender_count`
+   5:  
+   6:  
+   7:  OPTIONS()
+   8:  as (
+   9:    select
+  10:    CURRENT_DATE() as Ingestion_date, 
+  11:    countif(source.Gender is not null and source.Gender = "F") as Female_count,
+  12:    countif(source.Gender is not null and source.Gender = "M") as Male_count,
+  13:from 
+  14:    `prismatic-cider-279015`.`springml_demo_dataset`.`applicant_data` as source
+  15:  );
+  16:    
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+2020-08-05 18:48:06.238503 (Thread-1): finished collecting timing info
+2020-08-05 18:48:06.239160 (Thread-1): Runtime Error in model gender_count (models/applicant/gender_count.sql)
+  404 Not found: Table prismatic-cider-279015:springml_demo_dataset.applicant_data was not found in location US
+  
+  (job ID: d8caf74e-df4a-4128-bf08-e6a251d708d4)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 84, in exception_handler
+    yield
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 363, in _retry_and_handle
+    deadline=None)
+  File "/usr/local/lib/python3.7/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 225, in fn
+    return self._query_and_results(client, sql, conn, job_params)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 352, in _query_and_results
+    iterator = query_job.result(timeout=timeout)
+  File "/usr/local/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 3196, in result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/usr/local/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 818, in result
+    return super(_AsyncJob, self).result(timeout=timeout)
+  File "/usr/local/lib/python3.7/site-packages/google/api_core/future/polling.py", line 127, in result
+    raise self._exception
+google.api_core.exceptions.NotFound: 404 Not found: Table prismatic-cider-279015:springml_demo_dataset.applicant_data was not found in location US
+
+(job ID: d8caf74e-df4a-4128-bf08-e6a251d708d4)
+
+                                                                -----Query Job SQL Follows-----                                                                
+
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+   1:/* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.gender_count"} */
+   2:
+   3:
+   4:  create or replace table `prismatic-cider-279015`.`springml_demo_dataset`.`gender_count`
+   5:  
+   6:  
+   7:  OPTIONS()
+   8:  as (
+   9:    select
+  10:    CURRENT_DATE() as Ingestion_date, 
+  11:    countif(source.Gender is not null and source.Gender = "F") as Female_count,
+  12:    countif(source.Gender is not null and source.Gender = "M") as Male_count,
+  13:from 
+  14:    `prismatic-cider-279015`.`springml_demo_dataset`.`applicant_data` as source
+  15:  );
+  16:    
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 228, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 171, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 273, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 459, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 296, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 226, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 128, in macro
+  File "/usr/local/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 296, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 226, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/base/impl.py", line 228, in execute
+    fetch=fetch
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 234, in execute
+    query_job, iterator = self.raw_execute(sql, fetch=fetch)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 227, in raw_execute
+    query_job, iterator = self._retry_and_handle(msg=sql, conn=conn, fn=fn)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 363, in _retry_and_handle
+    deadline=None)
+  File "/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 107, in exception_handler
+    raise RuntimeException(exc_message)
+dbt.exceptions.RuntimeException: Runtime Error in model gender_count (models/applicant/gender_count.sql)
+  404 Not found: Table prismatic-cider-279015:springml_demo_dataset.applicant_data was not found in location US
+  
+  (job ID: d8caf74e-df4a-4128-bf08-e6a251d708d4)
+2020-08-05 18:48:06.240072 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '388ec8e6-c024-4b54-a421-803c06bc9970', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f69bdd0>]}
+2020-08-05 18:48:06.241411 (Thread-1): 14:48:06 | 2 of 4 ERROR creating table model springml_demo_dataset.gender_count. [ERROR in 0.45s]
+2020-08-05 18:48:06.241602 (Thread-1): Finished running node model.springml_demo_dbt_project.gender_count
+2020-08-05 18:48:06.241795 (Thread-1): Began running node model.springml_demo_dbt_project.payments
+2020-08-05 18:48:06.243058 (Thread-1): 14:48:06 | 3 of 4 START view model springml_demo_dataset.payments............... [RUN]
+2020-08-05 18:48:06.243442 (Thread-1): Acquiring new bigquery connection "model.springml_demo_dbt_project.payments".
+2020-08-05 18:48:06.243551 (Thread-1): Re-using an available connection from the pool (formerly model.springml_demo_dbt_project.gender_count).
+2020-08-05 18:48:06.243657 (Thread-1): Compiling model.springml_demo_dbt_project.payments
+2020-08-05 18:48:06.252738 (Thread-1): Writing injected SQL for node "model.springml_demo_dbt_project.payments"
+2020-08-05 18:48:06.253222 (Thread-1): finished collecting timing info
+2020-08-05 18:48:06.257554 (Thread-1): Writing runtime SQL for node "model.springml_demo_dbt_project.payments"
+2020-08-05 18:48:06.258018 (Thread-1): On model.springml_demo_dbt_project.payments: /* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.payments"} */
+
+
+  create or replace view `prismatic-cider-279015`.`springml_demo_dataset`.`payments`
+  OPTIONS()
+  as select payment_type, 
+    count(*) as number_of_payments, 
+    sum(price) as total_price 
+from `prismatic-cider-279015`.`springml_demo_dataset`.`sales`
+where country like "United States"
+group by payment_type;
+
+
+2020-08-05 18:48:06.554169 (Thread-1): Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.payments"} */
+
+
+  create or replace view `prismatic-cider-279015`.`springml_demo_dataset`.`payments`
+  OPTIONS()
+  as select payment_type, 
+    count(*) as number_of_payments, 
+    sum(price) as total_price 
+from `prismatic-cider-279015`.`springml_demo_dataset`.`sales`
+where country like "United States"
+group by payment_type;
+
+
+2020-08-05 18:48:06.554463 (Thread-1): 404 Not found: Table prismatic-cider-279015:springml_demo_dataset.sales was not found in location US
+
+(job ID: 670a1df9-98fe-4e6b-b57c-b6816742a5be)
+
+                                                              -----Query Job SQL Follows-----                                                              
+
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+   1:/* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.payments"} */
+   2:
+   3:
+   4:  create or replace view `prismatic-cider-279015`.`springml_demo_dataset`.`payments`
+   5:  OPTIONS()
+   6:  as select payment_type, 
+   7:    count(*) as number_of_payments, 
+   8:    sum(price) as total_price 
+   9:from `prismatic-cider-279015`.`springml_demo_dataset`.`sales`
+  10:where country like "United States"
+  11:group by payment_type;
+  12:
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+2020-08-05 18:48:06.554781 (Thread-1): finished collecting timing info
+2020-08-05 18:48:06.555919 (Thread-1): Runtime Error in model payments (models/base/payments.sql)
+  404 Not found: Table prismatic-cider-279015:springml_demo_dataset.sales was not found in location US
+  
+  (job ID: 670a1df9-98fe-4e6b-b57c-b6816742a5be)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 84, in exception_handler
+    yield
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 363, in _retry_and_handle
+    deadline=None)
+  File "/usr/local/lib/python3.7/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 225, in fn
+    return self._query_and_results(client, sql, conn, job_params)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 352, in _query_and_results
+    iterator = query_job.result(timeout=timeout)
+  File "/usr/local/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 3196, in result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/usr/local/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 818, in result
+    return super(_AsyncJob, self).result(timeout=timeout)
+  File "/usr/local/lib/python3.7/site-packages/google/api_core/future/polling.py", line 127, in result
+    raise self._exception
+google.api_core.exceptions.NotFound: 404 Not found: Table prismatic-cider-279015:springml_demo_dataset.sales was not found in location US
+
+(job ID: 670a1df9-98fe-4e6b-b57c-b6816742a5be)
+
+                                                              -----Query Job SQL Follows-----                                                              
+
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+   1:/* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.payments"} */
+   2:
+   3:
+   4:  create or replace view `prismatic-cider-279015`.`springml_demo_dataset`.`payments`
+   5:  OPTIONS()
+   6:  as select payment_type, 
+   7:    count(*) as number_of_payments, 
+   8:    sum(price) as total_price 
+   9:from `prismatic-cider-279015`.`springml_demo_dataset`.`sales`
+  10:where country like "United States"
+  11:group by payment_type;
+  12:
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 228, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 171, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 273, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 459, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 296, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 226, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 21, in macro
+  File "/usr/local/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 296, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 226, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 65, in macro
+  File "/usr/local/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 296, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 226, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/base/impl.py", line 228, in execute
+    fetch=fetch
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 234, in execute
+    query_job, iterator = self.raw_execute(sql, fetch=fetch)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 227, in raw_execute
+    query_job, iterator = self._retry_and_handle(msg=sql, conn=conn, fn=fn)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 363, in _retry_and_handle
+    deadline=None)
+  File "/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 107, in exception_handler
+    raise RuntimeException(exc_message)
+dbt.exceptions.RuntimeException: Runtime Error in model payments (models/base/payments.sql)
+  404 Not found: Table prismatic-cider-279015:springml_demo_dataset.sales was not found in location US
+  
+  (job ID: 670a1df9-98fe-4e6b-b57c-b6816742a5be)
+2020-08-05 18:48:06.559124 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '388ec8e6-c024-4b54-a421-803c06bc9970', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f6a9610>]}
+2020-08-05 18:48:06.560596 (Thread-1): 14:48:06 | 3 of 4 ERROR creating view model springml_demo_dataset.payments...... [ERROR in 0.32s]
+2020-08-05 18:48:06.560756 (Thread-1): Finished running node model.springml_demo_dbt_project.payments
+2020-08-05 18:48:06.560927 (Thread-1): Began running node model.springml_demo_dbt_project.redact_fields
+2020-08-05 18:48:06.562494 (Thread-1): 14:48:06 | 4 of 4 START table model springml_demo_dataset.redact_fields......... [RUN]
+2020-08-05 18:48:06.562878 (Thread-1): Acquiring new bigquery connection "model.springml_demo_dbt_project.redact_fields".
+2020-08-05 18:48:06.562988 (Thread-1): Re-using an available connection from the pool (formerly model.springml_demo_dbt_project.payments).
+2020-08-05 18:48:06.563091 (Thread-1): Compiling model.springml_demo_dbt_project.redact_fields
+2020-08-05 18:48:06.574882 (Thread-1): Writing injected SQL for node "model.springml_demo_dbt_project.redact_fields"
+2020-08-05 18:48:06.575689 (Thread-1): finished collecting timing info
+2020-08-05 18:48:06.580760 (Thread-1): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2020-08-05 18:48:06.859114 (Thread-1): Writing runtime SQL for node "model.springml_demo_dbt_project.redact_fields"
+2020-08-05 18:48:06.859871 (Thread-1): On model.springml_demo_dbt_project.redact_fields: /* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.redact_fields"} */
+
+
+  create or replace table `prismatic-cider-279015`.`springml_demo_dataset`.`redact_fields`
+  
+  
+  OPTIONS()
+  as (
+    with source as (
+	select * 
+	from
+		`prismatic-cider-279015`.`springml_demo_dataset`.`applicant_data`
+),
+
+casted as (
+	select
+		Employee_no as Emp_no,
+		cast(Phone_no as string),
+		cast(Social_insurance_no as string)
+	from source
+),
+
+casted_redacted as (
+	select
+		Emp_no,
+		'##ARCHIVED##' as Phone_no,
+		'##ARCHIVED##' as Social_insurance_no
+	from casted
+),
+
+redacted as (
+	select
+		Employee_no,
+		'##ARCHIVED##' as Surname,
+		'##ARCHIVED##'as Given_name,
+		Gender,
+		City,
+		Age,
+		Year_joined
+	from	
+		source
+)
+
+select 
+	redacted.Employee_no,
+	redacted.Surname,
+	redacted.Given_name,
+	redacted.Gender,
+	redacted.City,
+	redacted.Age,
+	redacted.Year_joined,
+	casted_redacted.Phone_no,
+	casted_redacted.Social_insurance_no
+from 
+	redacted
+join 
+	casted_redacted 
+		on redacted.Employee_no = casted_redacted.Emp_no
+  );
+    
+2020-08-05 18:48:07.064664 (Thread-1): Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.redact_fields"} */
+
+
+  create or replace table `prismatic-cider-279015`.`springml_demo_dataset`.`redact_fields`
+  
+  
+  OPTIONS()
+  as (
+    with source as (
+	select * 
+	from
+		`prismatic-cider-279015`.`springml_demo_dataset`.`applicant_data`
+),
+
+casted as (
+	select
+		Employee_no as Emp_no,
+		cast(Phone_no as string),
+		cast(Social_insurance_no as string)
+	from source
+),
+
+casted_redacted as (
+	select
+		Emp_no,
+		'##ARCHIVED##' as Phone_no,
+		'##ARCHIVED##' as Social_insurance_no
+	from casted
+),
+
+redacted as (
+	select
+		Employee_no,
+		'##ARCHIVED##' as Surname,
+		'##ARCHIVED##'as Given_name,
+		Gender,
+		City,
+		Age,
+		Year_joined
+	from	
+		source
+)
+
+select 
+	redacted.Employee_no,
+	redacted.Surname,
+	redacted.Given_name,
+	redacted.Gender,
+	redacted.City,
+	redacted.Age,
+	redacted.Year_joined,
+	casted_redacted.Phone_no,
+	casted_redacted.Social_insurance_no
+from 
+	redacted
+join 
+	casted_redacted 
+		on redacted.Employee_no = casted_redacted.Emp_no
+  );
+    
+2020-08-05 18:48:07.064936 (Thread-1): 404 Not found: Table prismatic-cider-279015:springml_demo_dataset.applicant_data was not found in location US
+
+(job ID: d84799f9-91b6-4fcd-b2fb-7857ad0696da)
+
+                                                                -----Query Job SQL Follows-----                                                                 
+
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+   1:/* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.redact_fields"} */
+   2:
+   3:
+   4:  create or replace table `prismatic-cider-279015`.`springml_demo_dataset`.`redact_fields`
+   5:  
+   6:  
+   7:  OPTIONS()
+   8:  as (
+   9:    with source as (
+  10:	select * 
+  11:	from
+  12:		`prismatic-cider-279015`.`springml_demo_dataset`.`applicant_data`
+  13:),
+  14:
+  15:casted as (
+  16:	select
+  17:		Employee_no as Emp_no,
+  18:		cast(Phone_no as string),
+  19:		cast(Social_insurance_no as string)
+  20:	from source
+  21:),
+  22:
+  23:casted_redacted as (
+  24:	select
+  25:		Emp_no,
+  26:		'##ARCHIVED##' as Phone_no,
+  27:		'##ARCHIVED##' as Social_insurance_no
+  28:	from casted
+  29:),
+  30:
+  31:redacted as (
+  32:	select
+  33:		Employee_no,
+  34:		'##ARCHIVED##' as Surname,
+  35:		'##ARCHIVED##'as Given_name,
+  36:		Gender,
+  37:		City,
+  38:		Age,
+  39:		Year_joined
+  40:	from	
+  41:		source
+  42:)
+  43:
+  44:select 
+  45:	redacted.Employee_no,
+  46:	redacted.Surname,
+  47:	redacted.Given_name,
+  48:	redacted.Gender,
+  49:	redacted.City,
+  50:	redacted.Age,
+  51:	redacted.Year_joined,
+  52:	casted_redacted.Phone_no,
+  53:	casted_redacted.Social_insurance_no
+  54:from 
+  55:	redacted
+  56:join 
+  57:	casted_redacted 
+  58:		on redacted.Employee_no = casted_redacted.Emp_no
+  59:  );
+  60:    
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+2020-08-05 18:48:07.065214 (Thread-1): finished collecting timing info
+2020-08-05 18:48:07.065918 (Thread-1): Runtime Error in model redact_fields (models/applicant/redact_fields.sql)
+  404 Not found: Table prismatic-cider-279015:springml_demo_dataset.applicant_data was not found in location US
+  
+  (job ID: d84799f9-91b6-4fcd-b2fb-7857ad0696da)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 84, in exception_handler
+    yield
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 363, in _retry_and_handle
+    deadline=None)
+  File "/usr/local/lib/python3.7/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 225, in fn
+    return self._query_and_results(client, sql, conn, job_params)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 352, in _query_and_results
+    iterator = query_job.result(timeout=timeout)
+  File "/usr/local/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 3196, in result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/usr/local/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 818, in result
+    return super(_AsyncJob, self).result(timeout=timeout)
+  File "/usr/local/lib/python3.7/site-packages/google/api_core/future/polling.py", line 127, in result
+    raise self._exception
+google.api_core.exceptions.NotFound: 404 Not found: Table prismatic-cider-279015:springml_demo_dataset.applicant_data was not found in location US
+
+(job ID: d84799f9-91b6-4fcd-b2fb-7857ad0696da)
+
+                                                                -----Query Job SQL Follows-----                                                                 
+
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+   1:/* {"app": "dbt", "dbt_version": "0.17.0", "profile_name": "springml", "target_name": "dev", "node_id": "model.springml_demo_dbt_project.redact_fields"} */
+   2:
+   3:
+   4:  create or replace table `prismatic-cider-279015`.`springml_demo_dataset`.`redact_fields`
+   5:  
+   6:  
+   7:  OPTIONS()
+   8:  as (
+   9:    with source as (
+  10:	select * 
+  11:	from
+  12:		`prismatic-cider-279015`.`springml_demo_dataset`.`applicant_data`
+  13:),
+  14:
+  15:casted as (
+  16:	select
+  17:		Employee_no as Emp_no,
+  18:		cast(Phone_no as string),
+  19:		cast(Social_insurance_no as string)
+  20:	from source
+  21:),
+  22:
+  23:casted_redacted as (
+  24:	select
+  25:		Emp_no,
+  26:		'##ARCHIVED##' as Phone_no,
+  27:		'##ARCHIVED##' as Social_insurance_no
+  28:	from casted
+  29:),
+  30:
+  31:redacted as (
+  32:	select
+  33:		Employee_no,
+  34:		'##ARCHIVED##' as Surname,
+  35:		'##ARCHIVED##'as Given_name,
+  36:		Gender,
+  37:		City,
+  38:		Age,
+  39:		Year_joined
+  40:	from	
+  41:		source
+  42:)
+  43:
+  44:select 
+  45:	redacted.Employee_no,
+  46:	redacted.Surname,
+  47:	redacted.Given_name,
+  48:	redacted.Gender,
+  49:	redacted.City,
+  50:	redacted.Age,
+  51:	redacted.Year_joined,
+  52:	casted_redacted.Phone_no,
+  53:	casted_redacted.Social_insurance_no
+  54:from 
+  55:	redacted
+  56:join 
+  57:	casted_redacted 
+  58:		on redacted.Employee_no = casted_redacted.Emp_no
+  59:  );
+  60:    
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 228, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 171, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 273, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.7/site-packages/dbt/node_runners.py", line 459, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 296, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 226, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 128, in macro
+  File "/usr/local/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 296, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/clients/jinja.py", line 226, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/base/impl.py", line 228, in execute
+    fetch=fetch
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 234, in execute
+    query_job, iterator = self.raw_execute(sql, fetch=fetch)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 227, in raw_execute
+    query_job, iterator = self._retry_and_handle(msg=sql, conn=conn, fn=fn)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 363, in _retry_and_handle
+    deadline=None)
+  File "/usr/local/Cellar/python/3.7.7/Frameworks/Python.framework/Versions/3.7/lib/python3.7/contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 107, in exception_handler
+    raise RuntimeException(exc_message)
+dbt.exceptions.RuntimeException: Runtime Error in model redact_fields (models/applicant/redact_fields.sql)
+  404 Not found: Table prismatic-cider-279015:springml_demo_dataset.applicant_data was not found in location US
+  
+  (job ID: d84799f9-91b6-4fcd-b2fb-7857ad0696da)
+2020-08-05 18:48:07.066800 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '388ec8e6-c024-4b54-a421-803c06bc9970', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f693dd0>]}
+2020-08-05 18:48:07.068316 (Thread-1): 14:48:07 | 4 of 4 ERROR creating table model springml_demo_dataset.redact_fields [ERROR in 0.50s]
+2020-08-05 18:48:07.068504 (Thread-1): Finished running node model.springml_demo_dbt_project.redact_fields
+2020-08-05 18:48:07.141376 (MainThread): Acquiring new bigquery connection "master".
+2020-08-05 18:48:07.141650 (MainThread): Opening a new connection, currently in state closed
+2020-08-05 18:48:07.142198 (MainThread): 14:48:07 | 
+2020-08-05 18:48:07.142455 (MainThread): 14:48:07 | Finished running 2 view models, 2 table models in 6.45s.
+2020-08-05 18:48:07.142758 (MainThread): Connection 'master' was properly closed.
+2020-08-05 18:48:07.142991 (MainThread): Connection 'model.springml_demo_dbt_project.redact_fields' was left open.
+2020-08-05 18:48:07.160636 (MainThread): 
+2020-08-05 18:48:07.160934 (MainThread): Completed with 4 errors and 0 warnings:
+2020-08-05 18:48:07.161304 (MainThread): 
+2020-08-05 18:48:07.161482 (MainThread): Runtime Error in model creditcard (models/base/creditcard.sql)
+2020-08-05 18:48:07.161660 (MainThread):   404 Not found: Table prismatic-cider-279015:springml_demo_dataset.sales was not found in location US
+2020-08-05 18:48:07.161847 (MainThread):   
+2020-08-05 18:48:07.162017 (MainThread):   (job ID: 82e053d6-35a2-400a-a71a-91567bf567a2)
+2020-08-05 18:48:07.162175 (MainThread): 
+2020-08-05 18:48:07.162325 (MainThread): Runtime Error in model gender_count (models/applicant/gender_count.sql)
+2020-08-05 18:48:07.162462 (MainThread):   404 Not found: Table prismatic-cider-279015:springml_demo_dataset.applicant_data was not found in location US
+2020-08-05 18:48:07.162576 (MainThread):   
+2020-08-05 18:48:07.162697 (MainThread):   (job ID: d8caf74e-df4a-4128-bf08-e6a251d708d4)
+2020-08-05 18:48:07.162822 (MainThread): 
+2020-08-05 18:48:07.162962 (MainThread): Runtime Error in model payments (models/base/payments.sql)
+2020-08-05 18:48:07.163088 (MainThread):   404 Not found: Table prismatic-cider-279015:springml_demo_dataset.sales was not found in location US
+2020-08-05 18:48:07.163204 (MainThread):   
+2020-08-05 18:48:07.163340 (MainThread):   (job ID: 670a1df9-98fe-4e6b-b57c-b6816742a5be)
+2020-08-05 18:48:07.163457 (MainThread): 
+2020-08-05 18:48:07.163587 (MainThread): Runtime Error in model redact_fields (models/applicant/redact_fields.sql)
+2020-08-05 18:48:07.163715 (MainThread):   404 Not found: Table prismatic-cider-279015:springml_demo_dataset.applicant_data was not found in location US
+2020-08-05 18:48:07.163829 (MainThread):   
+2020-08-05 18:48:07.163943 (MainThread):   (job ID: d84799f9-91b6-4fcd-b2fb-7857ad0696da)
+2020-08-05 18:48:07.164073 (MainThread): 
+Done. PASS=0 WARN=0 ERROR=4 SKIP=0 TOTAL=4
+2020-08-05 18:48:07.164311 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ec9a750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ec9a990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ed88710>]}
+2020-08-05 18:48:07.164524 (MainThread): Flushing usage events

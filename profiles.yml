@@ -3,7 +3,8 @@ springml:
     outputs:
         dev:
           type: bigquery
-          method: oauth
+          method: service-account
+          keyfile: springml_dbt_credentials.json
           project: prismatic-cider-279015
           dataset: springml_demo_dataset
           location: US
