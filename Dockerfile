@@ -1,6 +1,6 @@
 FROM fishtownanalytics/dbt:0.17.0
-# USER root
-COPY profiles.yml /home/dbt_user/.dbt/
+USER root
+ADD profiles.yml /home/dbt_user/.dbt/
 # RUN cd .. && cd .. && cd home/dbt_user/ && mkdir .dbt/
 # COPY profiles.yml /home/dbt_user/.dbt
 # RUN cd .. && cd .. && cd usr/app/
